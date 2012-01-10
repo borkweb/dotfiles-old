@@ -1,4 +1,21 @@
-source ~/borkweb-shell/psu.sh
+case $(hostname -d) in
+	'dev.plymouth.edu')
+		export PSU_SERVER=$(hostname -d)
+		export PSU_DEV=true
+		export TMUX_SERVER_COLOR=green
+		source ~/psu.sh
+		;;
+	'plymouth.edu')
+		export PSU_SERVER=$(hostname -d)
+		export PSU_DEV=false
+		export TMUX_SERVER_COLOR=red
+		source ~/psu.sh
+		;;
+	*)
+		export PSU_DEV=false
+		export TMUX_SERVER_COLOR=green
+		;;
+esac
 
 export EDITOR=vi
 export PATH=$HOME/bin/:$HOME/:$PATH
