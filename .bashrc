@@ -1,4 +1,4 @@
-source ~/borkweb-shell/.psu.sh
+source ~/borkweb-shell/psu.sh
 
 export EDITOR=vi
 export PATH=$HOME/bin/:$HOME/:$PATH
