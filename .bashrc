@@ -38,4 +38,7 @@ alias svnupdry='svn merge --dry-run -r BASE:HEAD .'
 alias dw="svn diff -x -w"
 alias pack='ack --pager="less -R"'
 
+source ~/.git-completion.bash
+export PS1='\e[1;30m$(__git_ps1 "(%s)")\e[m$ '
+
 umask 002
