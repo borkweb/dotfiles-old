@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export PATH=/facstaff/B/ambackstrom/bin/:/usr/local/server/git/bin:/usr/openv/java/jre/bin:$HOME/local/node/bin:$PATH
+export PATH=/web/opt/bin:/usr/local/server/git/bin:/usr/openv/java/jre/bin:$HOME/local/node/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
-export LD_LIBRARY_PATH=/facstaff/B/ambackstrom/lib/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/web/opt/lib:$LD_LIBRARY_PATH
 export CDPATH=.:/web/pscpages/webapp
 
 function b() { 
