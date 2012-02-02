@@ -10,6 +10,16 @@ function b() {
 	pwd;
 }
 
+function wpt() { 
+	cd /web/connect.plymouth.edu/wp-content/themes/"$*";
+	pwd;
+}
+
+function e() { 
+	cd ~/includes_external/"$*";
+	pwd;
+}
+
 function e() { 
 	cd ~/includes_external/"$*";
 	pwd;
