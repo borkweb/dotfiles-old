@@ -15,9 +15,6 @@ set pastetoggle=<F2>
 let mapleader=","
 " go back # words
 map <leader>b :b#<CR>
-" paste and indent
-map <leader>P P'[v']=
-map <leader>p p'[v']=
 " wordwraps a paragraph
 map <leader>q gqap
 " makes the current window wider by 10 characters
@@ -32,6 +29,8 @@ map <silent> <leader>w :set wrap linebreak textwidth=0<CR>
 map <silent> <leader>W :set nowrap<CR>
 
 map K <Nop>
+
+map <leader>t <Esc>:tabnew<CR>
 
 " http://vim.wikia.com/wiki/Open_SVN_diff_window
 map <leader>d :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>ggdd
