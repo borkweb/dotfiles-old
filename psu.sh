@@ -1,9 +1,11 @@
 #!/bin/bash
 
-export PATH=/web/opt/bin:/usr/local/server/git/bin:/usr/openv/java/jre/bin:$HOME/local/node/bin:$PATH
+export PATH=/facstaff/B/ambackstrom/bin:/web/opt/bin:/usr/local/server/git/bin:/usr/openv/java/jre/bin:$HOME/local/node/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
 export LD_LIBRARY_PATH=/web/opt/lib:$LD_LIBRARY_PATH
 export CDPATH=.:/web/pscpages/webapp
+
+source ~/.weboptrc
 
 function b() { 
 	cd ~/webapp/banner/"$*";
@@ -12,6 +14,11 @@ function b() {
 
 function wpt() { 
 	cd /web/connect.plymouth.edu/wp-content/themes/"$*";
+	pwd;
+}
+
+function wpp() { 
+	cd /web/connect.plymouth.edu/wp-content/plugins/"$*";
 	pwd;
 }
 
