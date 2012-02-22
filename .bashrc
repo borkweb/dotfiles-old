@@ -41,4 +41,6 @@ alias pack='ack --pager="less -R"'
 source ~/.git-completion.bash
 export PS1='\e[1;30m$(__git_ps1 "(%s)")\e[m$ '
 
+pfunc() { local regex=$1 ; shift ; ack --nogroup "function\s+&?$regex" "$@" ; }
+
 umask 002
