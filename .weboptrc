@@ -1,0 +1,9 @@
+if [ -d /web/opt ] ; then
+    export PATH=/web/opt/bin:/web/opt/sbin:$PATH
+    export LD_LIBRARY_PATH=/web/opt/lib:$LD_LIBRARY_PATH
+    export NODE_PATH=/web/opt/lib/node_modules:$NODE_PATH
+
+    # This will break things unless you're manually specifying
+    # your MANPATH in .bash_profile.
+    #export MANPATH=/web/opt/man:/web/opt/share/man
+fi
