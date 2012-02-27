@@ -103,7 +103,7 @@ dvcs_function="
         fi
 
         # output the branch and changed character if present
-        prompt=\$prompt\"\\[\$COLOR_YELLOW\\] (\"
+        prompt=\$prompt\"\\[\$COLOR_YELLOW\\](\"
 
         if is_submodule; then
             prompt=\$prompt\"\\[\$COLOR_MAGENTA\\]\$SUBMODULE_TEXT\\[\$COLOR_YELLOW\\]\"
@@ -137,7 +137,7 @@ dvcs_function="
 
         # revision number (instead of branch name, silly svn)
         revNo=\`svnversion --no-newline\`
-        prompt=\$prompt\"\\[\$COLOR_CYAN\\] (svn\"
+        prompt=\$prompt\"\\[\$COLOR_CYAN\\](svn\"
         prompt=\$prompt\"\\[\$COLOR_CYAN\\] :\$revNo\\[\$COLOR_CYAN\\] \"
         prompt=\$prompt\"\$svnChange)\\[\$COLOR_RESET\\]\"
     fi
