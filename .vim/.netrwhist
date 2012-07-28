@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/web/pscpages/webapp/themes/templates'
-let g:netrw_dirhist_2='/web/accounts/B/mtbatchelder/.vim/snipmate.vim/syntax'
-let g:netrw_dirhist_3='/web/accounts/B/mtbatchelder/.vim/snippets/php'
-let g:netrw_dirhist_4='/web/pscpages/webapp/teacher-cert/mock'
-let g:netrw_dirhist_5='/web/pscpages/webapp/teacher-cert'
-let g:netrw_dirhist_6='/web/pscpages/webapp/webapp-template/t/templates'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/web/pscpages/webapp/themes/my/themes/spring-fling-12'
+let g:netrw_dirhist_2='/web/pscpages/webapp/themes/my/themes/lgbtq'
+let g:netrw_dirhist_3='/web/pscpages/webapp/themes/my/themes/chili-cookoff'
+let g:netrw_dirhist_4='/web/pscpages/webapp/apple/templates'
+let g:netrw_dirhist_5='/web/pscpages/webapp/themes/my/themes/thanksgiving-11'
+let g:netrw_dirhist_6='/web/pscpages/webapp/ecommerce/report/includes'
+let g:netrw_dirhist_7='/web/dev/com/mtbatchelder.psudev.com/routes'
+let g:netrw_dirhist_8='/web/dev/com/mtbatchelder.psudev.com/lib/PSU/Ecommerce'

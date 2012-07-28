@@ -34,12 +34,15 @@ h() {
 	fi
 }
 
+[[ -f ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
+
 alias svnupdry='svn merge --dry-run -r BASE:HEAD .' 
 alias dw="svn diff -x -w"
 alias pack='ack --pager="less -R"'
+alias svimdiff='svn diff --diff-cmd svn-vimdiff'
+alias mpush='git multipush -b master:master capricorn rotanev choo crater'
 
-#source ~/.git-completion.bash
-#export PS1='\e[1;30m$(__git_ps1 "(%s)")\e[m$ '
+source ~/.git-completion.bash
 
 . ~/.bash_prompt
 
