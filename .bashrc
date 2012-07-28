@@ -1,18 +1,5 @@
 case $(hostname -d) in
-	'dev.plymouth.edu')
-		export PSU_SERVER=$(hostname -d)
-		export PSU_DEV=true
-		export TMUX_SERVER_COLOR=green
-		source ~/psu.sh
-		;;
-	'plymouth.edu')
-		export PSU_SERVER=$(hostname -d)
-		export PSU_DEV=false
-		export TMUX_SERVER_COLOR=red
-		source ~/psu.sh
-		;;
 	*)
-		export PSU_DEV=false
 		export TMUX_SERVER_COLOR=green
 		;;
 esac
@@ -40,7 +27,6 @@ alias svnupdry='svn merge --dry-run -r BASE:HEAD .'
 alias dw="svn diff -x -w"
 alias pack='ack --pager="less -R"'
 alias svimdiff='svn diff --diff-cmd svn-vimdiff'
-alias mpush='git multipush -b master:master capricorn rotanev choo crater'
 
 source ~/.git-completion.bash
 
