@@ -1,9 +1,4 @@
-case $(hostname -d) in
-	*)
-		export TMUX_SERVER_COLOR=green
-		;;
-esac
-
+export TMUX_SERVER_COLOR=green
 export EDITOR=vi
 export PATH=$HOME/bin/:$HOME/:$PATH
 export PATH=$HOME/local/bin:$PATH
