@@ -1,9 +1,20 @@
 " http://py.vaults.ca/~x/python_and_vim.html
 
 set nocp
-set backspace=2 sts=0 ts=2 sw=2 smarttab noet ai nocin
-set ruler nowrap hidden showmatch matchtime=3 t_Co=256
-set wrapscan incsearch ignorecase hlsearch smartcase
+set backspace=2 
+set autoindent 
+set nocin
+set ruler 
+set nowrap 
+set hidden 
+set showmatch 
+set matchtime=3 
+set t_Co=256
+set wrapscan 
+set incsearch 
+set ignorecase 
+set hlsearch 
+set smartcase
 set updatecount=50
 set modeline modelines=5 nu spr
 
@@ -109,6 +120,7 @@ set background=dark
 set ffs=unix,dos,mac
 
 map <leader>v :call TogglePasteMode()<CR>
+set tabstop=2 softtabstop=2 shiftwidth=2
 
 function TogglePasteMode ()
         if (&paste)
@@ -119,4 +131,5 @@ function TogglePasteMode ()
         echo "paste mode on"
         endif
         endfunction
+
 
