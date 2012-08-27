@@ -22,6 +22,6 @@ function _git_prompt() {
 }
 
 function _prompt_command() {
-    PS1="`_git_prompt`"'$ '
+    PS1="\`if [[ \$? = "0" ]]; then echo "\\[\\033[33m\\]"; else echo "\\[\\033[31m\\]"; fi\`\[\][\!]\[\033[0m\] `_git_prompt`"'$ '
 }
 PROMPT_COMMAND=_prompt_command
