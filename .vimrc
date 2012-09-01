@@ -59,6 +59,7 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 autocmd BufRead,BufNewFile *.html set filetype=php
 autocmd BufRead,BufNewFile *.less set filetype=less
+autocmd BufEnter *.php :set syn=wordpress
 
 filetype indent on
 filetype plugin on
@@ -107,7 +108,6 @@ inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 " gf helpers (goto file)
 set path+=./**
 set path+=includes/**
-set path+=/web/includes_psu/**
 
 set suffixesadd=.php,.class.php,.inc.php
 set includeexpr=substitute(v:fname,'-$','','g')
