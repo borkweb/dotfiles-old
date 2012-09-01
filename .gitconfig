@@ -17,3 +17,6 @@
 
 [color]
 	ui = always
+	branch = auto
+	diff = auto
+	status = auto
