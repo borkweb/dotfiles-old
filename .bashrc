@@ -28,9 +28,7 @@ alias pack='ack --pager="less -R"'
 alias svimdiff='svn diff --diff-cmd svn-vimdiff'
 alias mysql.server='/usr/local/mysql/support-files/mysql.server'
 alias sshnhgo='ssh -i ~/.ssh/aug2012.pem ec2-user@zm.gostage.it'
-alias scpnhgo='ssh -i ~/.ssh/aug2012.pem ec2-user@zm.gostage.it'
 alias apache='sudo apachectl'
-alias girl='php ~/cron/shell-bg.php'
 alias gi='. /Users/$USER/git-info.sh'
 
 source ~/.git-completion.bash
