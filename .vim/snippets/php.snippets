@@ -1,0 +1,23 @@
+snippet sql SELECT
+	$${1:sql} = "
+		SELECT ${2:*}
+		  FROM ${3:table}
+	";
+snippet sql INSERT
+	$${1:sql} = "
+		INSERT INTO ${2:table} (
+			${3:field}
+		) VALUES (
+			${4:data}
+		)
+	";
+snippet sql DELETE
+	$${1:sql} = "
+		DELETE FROM ${2:table} 
+		 WHERE ${3:field} = ${4:value}
+	";
+snippet sql UPDATE
+	$${1:sql} = "
+		UPDATE ${2:table} 
+			 SET ${3:field} = ${4:value}
+	";

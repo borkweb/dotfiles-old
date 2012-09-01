@@ -1,0 +1,18 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[user]
+	name = Matthew Batchelder
+	email = borkweb#gmail.com
+
+[github]
+	user = borkweb
+
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+
+[color]
+	ui = always
