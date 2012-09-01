@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/matt/Library/Application Support/Skype/ChatStyles/Bork.SkypeChatStyle'
+let g:netrw_dirhist_2='/Users/matt/Library/Application Support/Skype/ChatStyles/Bork.SkypeChatStyle/Contents'
+let g:netrw_dirhist_3='/Users/matt/Library/Application Support/Skype/ChatStyles/Bork.SkypeChatStyle/Contents/Resources'
+let g:netrw_dirhist_4='/Users/matt/Library/Application Support/Skype/ChatStyles/Bork.SkypeChatStyle/Contents/Resources/templates'
+let g:netrw_dirhist_5='/Library/WebServer/Documents/sites/gigaom/wp-content'
+let g:netrw_dirhist_6='/Library/WebServer/Documents/sites/gigaom/wp-content/themes/gigaomcore/plugins/go-liveupdates/components/templates'
+let g:netrw_dirhist_7='/Library/WebServer/Documents/wp/wp-content/plugins/go-debug'
+let g:netrw_dirhist_8='/Library/WebServer/Documents/sites/gigaom/wp-content/plugins/go-local-liveblog/components/js'
+let g:netrw_dirhist_9='/Library/WebServer/Documents/sites/gigaom/wp-content'
