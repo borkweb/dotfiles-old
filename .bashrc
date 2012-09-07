@@ -31,6 +31,8 @@ alias sshnhgo='ssh -i ~/.ssh/aug2012.pem ec2-user@zm.gostage.it'
 alias apache='sudo apachectl'
 alias gi='. /Users/$USER/git-info.sh'
 
+alias wacom='killall WacomTabletDriver;open "/Library/Application Support/Tablet/WacomTabletDriver.app"'
+
 source ~/.git-completion.bash
 
 . ~/.bash_prompt

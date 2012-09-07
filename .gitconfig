@@ -14,9 +14,16 @@
 	st = status
 	ci = commit
 	lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	d = difftool
 
 [color]
 	ui = always
 	branch = auto
 	diff = auto
 	status = auto
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false

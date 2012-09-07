@@ -23,6 +23,15 @@ set isfname+=_
 
 set pastetoggle=<F2>
 
+" ------------------------
+" diff settings
+" ------------------------
+" This adds vertical spacing to keep text in the left and right panes aligned
+set diffopt=filler
+
+" This sets it to ignore whitespace
+set diffopt+=iwhite
+
 let mapleader=","
 " go back # words
 map <leader>b :b#<CR>
@@ -58,6 +67,7 @@ call pathogen#runtime_append_all_bundles()
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 autocmd BufRead,BufNewFile *.html set filetype=php
+autocmd BufRead,BufNewFile *.svn-base set filetype=php
 autocmd BufRead,BufNewFile *.less set filetype=less
 autocmd BufEnter *.php :set syn=wordpress
 
