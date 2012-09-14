@@ -1,5 +1,3 @@
-" http://py.vaults.ca/~x/python_and_vim.html
-
 ""
 "" Basic Setup
 ""
@@ -16,11 +14,14 @@ set nowrap                     " don't wrap lines
 set backspace=indent,eol,start " backspace through everything in insert mode
 set autoindent                 " Automatic indentation
 set list                       " Show invisible characters
-set tabstop=2 
-set softtabstop=2 
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2
+set wrapscan                   " wrap a whole word to the next line
 
-" List chars
+""
+"" List chars - show hidden characters
+""
 set listchars=""                  " Reset the listchars
 set listchars=tab:>-              " a tab should display as ">-", trailing whitespace as "."
 set listchars+=trail:.            " show trailing spaces as dots
@@ -28,25 +29,35 @@ set listchars+=extends:>          " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the screen
-set nocin
+
+""
+"" Search Settings
+""
+set hlsearch    " Highlight all search terms
+set incsearch   " While typing a search command, show where the pattern - as it was typed - matches
+set ignorecase  " Ignore case when searching
+set smartcase   " Override the ignorecase option if the search pattern contains uppercase characters
+set showmatch   " When a bracket is inserted, briefly jump to the matching one if on the screen
+set matchtime=3 " 10ths of a second to show the matching paren
+
+""
+"" Misc Settings
+""
+set iskeyword-=_     " Include underscores as part of keyword names
+set isfname+=_       " Include underscores as part of filenames
+set updatecount=50   " After this many characters, write the swp file to disk
+set ffs=unix,dos,mac " Sets the EOL format
+set pastetoggle=<F2> " Set a key for toggling paste mode
+set nocindent        " Disables automattic C program indenting
 set hidden
-set showmatch
-set matchtime=3
-set t_Co=256
-set ffs=unix,dos,mac
-set wrapscan
-set incsearch
-set ignorecase
-set hlsearch
-set smartcase
-set updatecount=50
-set modeline modelines=5 nu spr
+set modeline 
+set modelines=5 
+set spr
 
-set iskeyword-=_
-set isfname+=_
-
-set pastetoggle=<F2>
-
+""
+"" Colors & Theme
+""
+set t_Co=256 " Set the terminal color to 256
 syntax on
 colorscheme bork
 
