@@ -97,9 +97,9 @@ function TogglePasteMode ()
         endif
         endfunction
 
-exe 'source ~/.vim/core/autocmd.vim'
-exe 'source ~/.vim/core/filetypes.vim'
-exe 'source ~/.vim/core/fuzzy-finder.vim'
-exe 'source ~/.vim/core/ctags.vim'
-exe 'source ~/.vim/core/mappings.vim'
-exe 'source ~/.vim/core/diff.vim'
+source ~/.vim/core/autocmd.vim
+source ~/.vim/core/filetypes.vim
+source ~/.vim/core/fuzzy-finder.vim
+source ~/.vim/core/ctags.vim
+source ~/.vim/core/mappings.vim
+source ~/.vim/core/diff.vim
