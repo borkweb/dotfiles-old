@@ -6,6 +6,7 @@ These are the tools that I use all the time.  Brew install ALL THE THINGS!
 
 * ack
 * autojump
+* ctags-exuberant _(Used for .vim/bundle/tagbar)_
 * fmdiff
 * lessc
 * node

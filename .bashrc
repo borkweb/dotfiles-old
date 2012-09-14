@@ -5,6 +5,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/pear/bin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+export EL4R_HOME="/Users/matt/.el4r"
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
@@ -27,7 +28,7 @@ alias dw="svn diff -x -w"
 alias pack='ack --pager="less -R"'
 alias svimdiff='svn diff --diff-cmd svn-vimdiff'
 alias mysql.server='/usr/local/mysql/support-files/mysql.server'
-alias sshnhgo='ssh -i ~/.ssh/aug2012.pem ec2-user@zm.gostage.it'
+alias sshnhgo='ssh -i ~/.ssh/aug2012.pem matt@zm.gostage.it'
 alias apache='sudo apachectl'
 alias gi='. /Users/$USER/git-info.sh'
 

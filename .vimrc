@@ -91,6 +91,9 @@ nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
+" Configure tagbar
+nmap <F6> :TagbarToggle<CR>
+
 :nnoremap <leader>i :setl noai nocin nosi inde=<CR>
 
 "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
@@ -172,3 +175,13 @@ function TogglePasteMode ()
         echo "paste mode on"
         endif
         endfunction
+
+" Setup tagbar markdown
+let g:tagbar_type_markdown = {
+	\ 'ctagstype' : 'markdown',
+	\ 'kinds' : [
+		\ 'h:Heading_L1',
+		\ 'i:Heading_L2',
+		\ 'k:Heading_L3'
+	\ ]
+\ }
