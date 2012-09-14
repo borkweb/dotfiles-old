@@ -1,19 +1,40 @@
 " http://py.vaults.ca/~x/python_and_vim.html
 
-set nocp
-set backspace=2 
-set autoindent 
+""
+"" Basic Setup
+""
+
+set nocompatible   " Use vim, no vi defaults
+set number         " Show line numbers
+set ruler          " Show line and column number
+set encoding=utf-8 " Set default encoding to UTF-8
+
+""
+"" Whitespace
+""
+set nowrap                     " don't wrap lines
+set backspace=indent,eol,start " backspace through everything in insert mode
+set autoindent                 " Automatic indentation
+set list                       " Show invisible characters
+
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:>-              " a tab should display as ">-", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
 set nocin
-set ruler 
-set nowrap 
-set hidden 
-set showmatch 
-set matchtime=3 
+set hidden
+set showmatch
+set matchtime=3
 set t_Co=256
-set wrapscan 
-set incsearch 
-set ignorecase 
-set hlsearch 
+set ffs=unix,dos,mac
+set wrapscan
+set incsearch
+set ignorecase
+set hlsearch
 set smartcase
 set updatecount=50
 set modeline modelines=5 nu spr
@@ -22,6 +43,8 @@ set iskeyword-=_
 set isfname+=_
 
 set pastetoggle=<F2>
+
+colorscheme herald
 
 " ------------------------
 " diff settings
@@ -43,17 +66,30 @@ map <leader>] 10<C-W>>
 map <leader>[ 10<C-W><
 
 map <silent> <leader>l :nohl<CR>
+
+" toggle showing of line numbers
 map <silent> <leader>L :se nu!<CR>
+
 nmap <leader>s :source ~/.vimrc<CR>
 map <silent> <leader>w :set wrap linebreak textwidth=0<CR>
 map <silent> <leader>W :set nowrap<CR>
 
 map K <Nop>
 
+" open a new tab
 map <leader>t <Esc>:tabnew<CR>
 
 " http://vim.wikia.com/wiki/Open_SVN_diff_window
 map <leader>d :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>ggdd
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
+
+" find merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" Adjust viewports to the same size
+map <Leader>= <C-w>=
 
 :nnoremap <leader>i :setl noai nocin nosi inde=<CR>
 
@@ -124,11 +160,6 @@ set includeexpr=substitute(v:fname,'-$','','g')
 
 syntax on
 
-colorscheme herald
-set background=dark
-
-set ffs=unix,dos,mac
-
 map <leader>v :call TogglePasteMode()<CR>
 set tabstop=2 softtabstop=2 shiftwidth=2
 
@@ -141,5 +172,3 @@ function TogglePasteMode ()
         echo "paste mode on"
         endif
         endfunction
-
-
