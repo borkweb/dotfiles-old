@@ -16,6 +16,9 @@ set nowrap                     " don't wrap lines
 set backspace=indent,eol,start " backspace through everything in insert mode
 set autoindent                 " Automatic indentation
 set list                       " Show invisible characters
+set tabstop=2 
+set softtabstop=2 
+set shiftwidth=2
 
 " List chars
 set listchars=""                  " Reset the listchars
@@ -44,105 +47,25 @@ set isfname+=_
 
 set pastetoggle=<F2>
 
+syntax on
 colorscheme bork
-
-" ------------------------
-" diff settings
-" ------------------------
-" This adds vertical spacing to keep text in the left and right panes aligned
-set diffopt=filler
-
-" This sets it to ignore whitespace
-set diffopt+=iwhite
-
-let mapleader=","
-" go back # words
-map <leader>b :b#<CR>
-" wordwraps a paragraph
-map <leader>q gqap
-" makes the current window wider by 10 characters
-map <leader>] 10<C-W>>
-" makes the current window smaller by 10 characters
-map <leader>[ 10<C-W><
-
-map <silent> <leader>l :nohl<CR>
-
-" toggle showing of line numbers
-map <silent> <leader>L :se nu!<CR>
-
-nmap <leader>s :source ~/.vimrc<CR>
-map <silent> <leader>w :set wrap linebreak textwidth=0<CR>
-map <silent> <leader>W :set nowrap<CR>
-
-map K <Nop>
-
-" open a new tab
-map <leader>t <Esc>:tabnew<CR>
-
-" http://vim.wikia.com/wiki/Open_SVN_diff_window
-map <leader>d :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>ggdd
-
-" Underline the current line with '='
-nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
-
-" find merge conflict markers
-nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
-
-" Adjust viewports to the same size
-map <Leader>= <C-w>=
-
-" Configure tagbar
-nmap <F6> :TagbarToggle<CR>
-
-:nnoremap <leader>i :setl noai nocin nosi inde=<CR>
-
-"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
-" abbr epoch <C-R>=strftime('%s')<CR>
 
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-autocmd BufRead,BufNewFile *.html set filetype=php
-autocmd BufRead,BufNewFile *.svn-base set filetype=php
-autocmd BufRead,BufNewFile *.less set filetype=less
-autocmd BufEnter *.php :set syn=wordpress
-
-filetype indent on
-filetype plugin on
-
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.pyc
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType less set omnifunc=csscomplete#CompleteCSS
-autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
-autocmd FileType make set noexpandtab
 
 let php_sql_query=1
 let php_htmlInStrings=1
 let php_noShortTags=1
 let php_folding=0
 
-nnoremap <silent> <Space> @=(foldclosed('.')!=-1?'za':'l')<CR>
-vnoremap <Space> zf
+" gf helpers (goto file)
+set path+=./**
+set path+=includes/**
 
-autocmd FileType php set makeprg=php\ -l\ %
-autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
-
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
-
-let g:FuzzyFinderOptions = { 'Base':{}, 'Buffer':{}, 'File':{}, 'Dir':{}, 'MruFile':{}, 'MruCmd':{}, 'Bookmark':{}, 'Tag':{}, 'TaggedFile':{}}
-let g:FuzzyFinderOptions.Base.abbrev_map = { "^psu" : [ "/web/includes_psu/**/" ], "^igrad" : [ "/web/pscpages/webapp/igrad/**/" ], "^ape" : ["/web/pscpages/webapp/ape/**/"], }
-nnoremap <silent> <C-n>      :FuzzyFinderBuffer<CR>
-nnoremap <silent> <C-m>      :FuzzyFinderFile<CR>
-
-set wildmenu
-set wildmode=list:longest,full
+set suffixesadd=.php,.class.php,.inc.php
+set includeexpr=substitute(v:fname,'-$','','g')
 
 function! MyTabOrComplete()
 	let col = col('.')-1
@@ -152,19 +75,6 @@ function! MyTabOrComplete()
 		return "\<C-N>"
 	endif
 endfunction
-inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
-
-" gf helpers (goto file)
-set path+=./**
-set path+=includes/**
-
-set suffixesadd=.php,.class.php,.inc.php
-set includeexpr=substitute(v:fname,'-$','','g')
-
-syntax on
-
-map <leader>v :call TogglePasteMode()<CR>
-set tabstop=2 softtabstop=2 shiftwidth=2
 
 function TogglePasteMode ()
         if (&paste)
@@ -176,12 +86,9 @@ function TogglePasteMode ()
         endif
         endfunction
 
-" Setup tagbar markdown
-let g:tagbar_type_markdown = {
-	\ 'ctagstype' : 'markdown',
-	\ 'kinds' : [
-		\ 'h:Heading_L1',
-		\ 'i:Heading_L2',
-		\ 'k:Heading_L3'
-	\ ]
-\ }
+exe 'source ~/.vim/core/autocmd.vim'
+exe 'source ~/.vim/core/filetypes.vim'
+exe 'source ~/.vim/core/fuzzy-finder.vim'
+exe 'source ~/.vim/core/ctags.vim'
+exe 'source ~/.vim/core/mappings.vim'
+exe 'source ~/.vim/core/diff.vim'
