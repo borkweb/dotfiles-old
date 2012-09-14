@@ -44,7 +44,7 @@ set isfname+=_
 
 set pastetoggle=<F2>
 
-colorscheme herald
+colorscheme bork
 
 " ------------------------
 " diff settings
