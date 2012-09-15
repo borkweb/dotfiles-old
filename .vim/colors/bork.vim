@@ -80,7 +80,7 @@ if has("gui_running")
 	" -> Code
 	hi Comment        guibg=#1F1F1F guifg=#698b22 gui=none
 	hi Constant       guibg=#1F1F1F guifg=#6DF584 gui=none
-	hi String         guibg=#1F1F1F guifg=#E783E9 gui=none
+	hi String         guibg=#1F1F1F guifg=#af9696 gui=none
 	hi Error          guibg=#1F1F1F guifg=#FC4234 gui=none
 	hi Identifier     guibg=#1F1F1F guifg=#70BDF1 gui=none
 	hi Function       guibg=#1F1F1F guifg=#90CBF1 gui=none
@@ -167,7 +167,7 @@ elseif &t_Co == 256
 	" -> Code
 	hi Comment        ctermbg=234  ctermfg=107   cterm=none
 	hi Constant       ctermbg=234  ctermfg=84    cterm=none
-	hi String         ctermbg=234  ctermfg=176   cterm=none
+	hi String         ctermbg=234  ctermfg=181   cterm=none
 	hi Error          ctermbg=234  ctermfg=203   cterm=none
 	hi Identifier     ctermbg=234  ctermfg=75    cterm=none
 	hi Function       ctermbg=234  ctermfg=117   cterm=none
