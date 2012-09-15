@@ -10,8 +10,10 @@ map <leader>c <c-_><c-_>
 
 " wordwraps a paragraph
 map <leader>q gqap
+
 " makes the current window wider by 10 characters
 map <leader>] 10<C-W>>
+
 " makes the current window smaller by 10 characters
 map <leader>[ 10<C-W><
 

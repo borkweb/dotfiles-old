@@ -50,8 +50,8 @@ set ffs=unix,dos,mac " Sets the EOL format
 set pastetoggle=<F2> " Set a key for toggling paste mode
 set nocindent        " Disables automattic C program indenting
 set hidden
-set modeline 
-set modelines=5 
+set modeline
+set modelines=5
 set spr
 
 ""
