@@ -71,6 +71,16 @@ let php_htmlInStrings=1
 let php_noShortTags=1
 let php_folding=0
 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " gf helpers (goto file)
 set path+=./**
 set path+=includes/**
@@ -103,3 +113,4 @@ source ~/.vim/core/fuzzy-finder.vim
 source ~/.vim/core/ctags.vim
 source ~/.vim/core/mappings.vim
 source ~/.vim/core/diff.vim
+source ~/.vim/core/gui.vim

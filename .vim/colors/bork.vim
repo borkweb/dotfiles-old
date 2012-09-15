@@ -22,7 +22,7 @@ if has("gui_running")
 
 	" -> Text; Miscellaneous
 	hi Normal         guibg=#1F1F1F guifg=#D0D0D0 gui=none
-	hi SpecialKey     guibg=#1F1F1F guifg=#E783E9 gui=none
+	hi SpecialKey     guibg=#1F1F1F guifg=#444444 gui=none
 	hi VertSplit      guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi SignColumn     guibg=#1F1F1F guifg=#BF81FA gui=none
 	hi NonText        guibg=#1F1F1F guifg=#FC6984 gui=none
@@ -36,8 +36,8 @@ if has("gui_running")
 	hi CursorLine     guibg=#000000               gui=none
 
 	" -> Folding
-	hi FoldColumn     guibg=#001336 guifg=#003DAD gui=none
-	hi Folded         guibg=#001336 guifg=#003DAD gui=none
+	hi FoldColumn     guibg=#101010 guifg=#555555 gui=none
+	hi Folded         guibg=#101010 guifg=#555555 gui=none
 
 	" -> Line info
 	hi LineNr         guibg=#000000 guifg=#696567 gui=none
@@ -69,18 +69,18 @@ if has("gui_running")
 	hi PmenuSel       guibg=#F17A00 guifg=#4C0200 gui=none
 
 	" -> Tabs
-	hi TabLine        guibg=#141414 guifg=#1F1F1F gui=none
-	hi TabLineFill    guibg=#000000               gui=none
-	hi TabLineSel     guibg=#1F1F1F guifg=#D0D0D0 gui=bold
+	hi TabLine        guibg=#212121 guifg=#BEBEBE Gui=none
+	hi TabLineFill    guibg=#1F1F1F               gui=none
+	hi TabLineSel     guibg=#1F1F1F guifg=#FFFFFF gui=bold
 	"
 	" -> Visual Mode
 	hi Visual         guibg=#000000 guifg=#FFB539 gui=none
 	hi VisualNOS      guibg=#000000 guifg=#696567 gui=none
 
 	" -> Code
-	hi Comment        guibg=#1F1F1F guifg=#696567 gui=none
+	hi Comment        guibg=#1F1F1F guifg=#698b22 gui=none
 	hi Constant       guibg=#1F1F1F guifg=#6DF584 gui=none
-	hi String         guibg=#1F1F1F guifg=#FFB539 gui=none
+	hi String         guibg=#1F1F1F guifg=#E783E9 gui=none
 	hi Error          guibg=#1F1F1F guifg=#FC4234 gui=none
 	hi Identifier     guibg=#1F1F1F guifg=#70BDF1 gui=none
 	hi Function       guibg=#1F1F1F guifg=#90CBF1 gui=none
@@ -90,7 +90,7 @@ if has("gui_running")
 	hi Special        guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi Todo           guibg=#1F1F1F guifg=#FC4234 gui=bold
 	hi Underlined     guibg=#1F1F1F guifg=#FC4234 gui=underline
-	hi Statement      guibg=#1F1F1F guifg=#E783E9 gui=none
+	hi Statement      guibg=#1F1F1F guifg=#d77a43 gui=none
 	hi Operator       guibg=#1F1F1F guifg=#FC6984 gui=none
 	hi Delimiter      guibg=#1F1F1F guifg=#FC6984 gui=none
 	hi Type           guibg=#1F1F1F guifg=#FFEE68 gui=none
@@ -123,8 +123,8 @@ elseif &t_Co == 256
 	hi CursorLine     ctermbg=0                  cterm=none
 
 	" -> Folding
-	hi FoldColumn     ctermbg=234  ctermfg=25    cterm=none
-	hi Folded         ctermbg=234  ctermfg=25    cterm=none
+	hi FoldColumn     ctermbg=234  ctermfg=Gray  cterm=none
+	hi Folded         ctermbg=234  ctermfg=Gray  cterm=none
 
 	" -> Line info
 	hi LineNr         ctermbg=0    ctermfg=241   cterm=none
@@ -165,9 +165,9 @@ elseif &t_Co == 256
 	hi VisualNOS      ctermbg=0    ctermfg=241   cterm=none
 
 	" -> Code
-	hi Comment        ctermbg=234  ctermfg=DarkGreen   cterm=none
+	hi Comment        ctermbg=234  ctermfg=107   cterm=none
 	hi Constant       ctermbg=234  ctermfg=84    cterm=none
-	hi String         ctermbg=234  ctermfg=215   cterm=none
+	hi String         ctermbg=234  ctermfg=176   cterm=none
 	hi Error          ctermbg=234  ctermfg=203   cterm=none
 	hi Identifier     ctermbg=234  ctermfg=75    cterm=none
 	hi Function       ctermbg=234  ctermfg=117   cterm=none
@@ -177,7 +177,7 @@ elseif &t_Co == 256
 	hi Special        ctermbg=234  ctermfg=227   cterm=none
 	hi Todo           ctermbg=234  ctermfg=203   cterm=bold
 	hi Underlined     ctermbg=234  ctermfg=203   cterm=underline
-	hi Statement      ctermbg=234  ctermfg=176   cterm=none
+	hi Statement      ctermbg=234  ctermfg=214   cterm=none
 	hi Operator       ctermbg=234  ctermfg=204   cterm=none
 	hi Delimiter      ctermbg=234  ctermfg=204   cterm=none
 	hi Type           ctermbg=234  ctermfg=227   cterm=none

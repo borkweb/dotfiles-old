@@ -4,6 +4,10 @@ let mapleader=","
 
 " go back # words
 map <leader>b :b#<CR>
+
+" shortcut for tcomment commenting
+map <leader>c <c-_><c-_>
+
 " wordwraps a paragraph
 map <leader>q gqap
 " makes the current window wider by 10 characters
