@@ -1,8 +1,16 @@
 ## Install [Homebrew](http://mxcl.github.com/homebrew/)
 Homebrew is the key to getting rock and rolling on anything!
 
+````
+/usr/bin/ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+````
+
 ### Stuff to Brew Install
 These are the tools that I use all the time.  Brew install ALL THE THINGS!
+
+````
+brew install ack autojump ctags-exuberant fmdiff lessc node siege tmux
+````
 
 * ack
 * autojump
@@ -17,3 +25,12 @@ These are the tools that I use all the time.  Brew install ALL THE THINGS!
 Once node is installed, get these in place:
 
 * grunt
+
+## Vim
+
+### Plugins
+
+#### Powerline
+This provides a sweet status bar.  Some [patched
+fonts](https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts)
+will be necessary.
