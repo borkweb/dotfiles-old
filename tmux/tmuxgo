@@ -1,0 +1,54 @@
+#!/bin/bash
+################################################################################
+# tmuxgo - originally by Dale Bewley <dale @ bewley net>
+#-------------------------------------------------------------------------------
+# Use me to get your tmux session restored after a reboot or reattach daily.
+# Just type tmuxgo every morning and hit ^bd at the end of the day. Login
+# remotely and do the same.
+#
+# Attaches to an existing session named $SESSION or will create one if missing.
+# The created session will be pre-populated with a number of windows. 
+#
+# Bugs & Todos:
+#	o If session already exists, instantiate any missing windows.
+#	  This could be done by checking tmux list-windows, not sure needed.
+#
+################################################################################
+
+# the name of your primary tmux session
+SESSION=$USER
+# your IRC nickname
+IRC_NICK=$USER
+
+if [ $PSU_DEV = 'true' ]; then
+	TMUX_SERVER_COLOR=green
+else
+	TMUX_SERVER_COLOR=red
+fi
+
+# if the session is already running, just attach to it.
+tmux has-session -t $SESSION
+if [ $? -eq 0 ]; then
+	echo "Session $SESSION already exists. Attaching."
+	sleep 1
+	tmux -2 attach -t $SESSION
+	exit 0;
+fi
+
+# create a new session, named $SESSION, and detach from it
+tmux -2 new-session -d -s $SESSION
+
+# Now populate the session with the windows you use every day
+# Some windows I specifically want at a particular index.
+
+tmux new-window    -t $SESSION:0
+tmux new-window    -t $SESSION:1
+tmux new-window    -t $SESSION:2
+tmux new-window    -t $SESSION:3
+#
+
+# all done. select starting window and get to work
+# you may need to cycle through windows and type in passwords
+# if you don't use ssh keys
+tmux select-window -t $SESSION:0
+tmux -2 attach -t $SESSION
