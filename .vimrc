@@ -6,6 +6,14 @@ set nocompatible   " Use vim, no vi defaults
 set number         " Show line numbers
 set ruler          " Show line and column number
 set encoding=utf-8 " Set default encoding to UTF-8
+set visualbell
+set cursorline     " highlight the line the cursor is on
+set ttyfast        " helps with repaint
+set laststatus=2   " 2 means all windows will always have a status line
+set textwidth=72   " set text width to 72 characters
+set colorcolumn=+1 " color the column after textwidth
+set wildmenu
+set wildmode=list:longest
 
 ""
 "" Whitespace
@@ -23,7 +31,8 @@ set wrapscan                   " wrap a whole word to the next line
 "" List chars - show hidden characters
 ""
 set listchars=""                  " Reset the listchars
-set listchars=tab:>-              " a tab should display as ">-", trailing whitespace as "."
+set listchars=eol:¬               " end of line should have ¬
+set listchars=tab:▸\              " a tab should display as "▸ ", trailing whitespace as "."
 set listchars+=trail:.            " show trailing spaces as dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the screen

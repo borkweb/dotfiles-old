@@ -28,6 +28,7 @@ if has("gui_running")
 	hi NonText        guibg=#1F1F1F guifg=#FC6984 gui=none
 	hi Directory      guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi Title          guibg=#1F1F1F guifg=#6DF584 gui=bold
+	hi ColorColumn    guibg=#111111
 
 	" -> Cursor
 	hi Cursor         guibg=#FFEE68 guifg=#1F1F1F gui=none
@@ -115,6 +116,7 @@ elseif &t_Co == 256
 	hi NonText        ctermbg=234  ctermfg=204   cterm=none
 	hi Directory      ctermbg=234  ctermfg=227   cterm=none
 	hi Title          ctermbg=234  ctermfg=84    cterm=bold
+	hi ColorColumn    ctermbg=233
 
 	" -> Cursor
 	hi Cursor         ctermbg=227  ctermfg=234   cterm=none
