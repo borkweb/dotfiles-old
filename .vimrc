@@ -66,7 +66,8 @@ set spr
 "" Colors & Theme
 ""
 set t_Co=256 " Set the terminal color to 256
-syntax on
+syntax enable
+set background=dark
 colorscheme bork
 
 call pathogen#helptags()
@@ -86,6 +87,7 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:Powerline_symbols = 'fancy'
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
