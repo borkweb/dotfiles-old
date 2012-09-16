@@ -36,6 +36,9 @@ nnoremap <leader>v V`]
 
 map K <Nop>
 
+" Toggle rainbow parenthesis
+nnoremap <silent> <leader>R :RainbowParenthesesToggle
+
 " open a new tab
 map <leader>t <Esc>:tabnew<CR>
 
@@ -57,7 +60,8 @@ map <Leader>= <C-w>=
 " Configure tagbar
 nmap <F6> :TagbarToggle<CR>
 
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
+" Toggle the awesome undo tree visualizer
+map <F5> :GundoToggle<CR>
 
 map <leader>p :call TogglePasteMode()<CR>
 
