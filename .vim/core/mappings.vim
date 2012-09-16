@@ -8,9 +8,6 @@ nnoremap <leader>a :Ack
 " go back # words
 map <leader>b :b#<CR>
 
-" shortcut for tcomment commenting
-map <leader>c <c-_><c-_>
-
 " folds an HTML tag
 nnoremap <leader>ft Vatzf
 
@@ -35,9 +32,6 @@ nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 nnoremap <leader>v V`]
 
 map K <Nop>
-
-" Toggle rainbow parenthesis
-nnoremap <silent> <leader>R :RainbowParenthesesToggle
 
 " open a new tab
 map <leader>t <Esc>:tabnew<CR>
@@ -65,6 +59,9 @@ map <F5> :GundoToggle<CR>
 
 map <leader>p :call TogglePasteMode()<CR>
 
+" Superuser write
+cnoremap w!! w !sudo dd of=%
+
 " Use perl compatible regex formatting...not vim style
 nnoremap / /\v
 vnoremap / /\v
@@ -79,3 +76,9 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <silent> <Space> @=(foldclosed('.')!=-1?'za':'l')<CR>
 vnoremap <Space> zf
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
+
+" Switch windows with ctrl + hjkl
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
