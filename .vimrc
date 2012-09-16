@@ -32,8 +32,8 @@ set wrapscan                   " wrap a whole word to the next line
 ""
 set listchars=""                  " Reset the listchars
 set listchars=eol:¬               " end of line should have ¬
-set listchars=tab:▸\              " a tab should display as "▸ ", trailing whitespace as "."
-set listchars+=trail:.            " show trailing spaces as dots
+set listchars=tab:»\              " a tab should display as "▸ ", trailing whitespace as "."
+set listchars+=trail:·            " show trailing spaces as dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the last column when wrap is
