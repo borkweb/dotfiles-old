@@ -1,6 +1,8 @@
 export TMUX_SERVER_COLOR=green
-export EDITOR=vi
+export EDITOR=vim
+export SVN_EDITOR=vim
 export PATH=$HOME/bin/:$HOME/:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/pear/bin:$PATH
