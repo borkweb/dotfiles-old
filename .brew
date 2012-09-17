@@ -28,4 +28,8 @@ brew install node
 brew install siege
 brew install tmux
 
+# this is for the jabberbot!
+brew install icu4c
+brew link icu4c
+
 brew cleanup
