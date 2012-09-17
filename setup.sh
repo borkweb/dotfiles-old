@@ -26,17 +26,17 @@ then
 	mkdir ~/bin
 fi
 
-link_shizzle ~/ .bash_prompt ~/dotfiles/.bash_prompt
-link_shizzle ~/ .bashrc ~/dotfiles/.bashrc
-link_shizzle ~/ .ctags ~/dotfiles/.ctags
-link_shizzle ~/ .screenrc ~/dotfiles/.screenrc
-link_shizzle ~/ .vimrc ~/dotfiles/.vimrc
-link_shizzle ~/ .vim ~/dotfiles/.vim
-link_shizzle ~/ .git-completion.bash ~/dotfiles/git/.git-completion.bash
-link_shizzle ~/ .gitconfig ~/dotfiles/git/.gitconfig
-link_shizzle ~/ git-info.sh ~/dotfiles/git/git-info.sh
-link_shizzle ~/ .tmux.conf ~/dotfiles/tmux/.tmux.conf
-link_shizzle ~/bin tmuxgo ~/dotfiles/tmux/tmuxgo
-link_shizzle ~/bin tmuxlogin ~/dotfiles/tmux/tmuxlogin
+link_shizzle ~/    .bash_prompt         ~/dotfiles/.bash_prompt
+link_shizzle ~/    .bashrc              ~/dotfiles/.bashrc
+link_shizzle ~/    .ctags               ~/dotfiles/.ctags
+link_shizzle ~/    .screenrc            ~/dotfiles/.screenrc
+link_shizzle ~/    .vimrc               ~/dotfiles/.vimrc
+link_shizzle ~/    .vim                 ~/dotfiles/.vim
+link_shizzle ~/    .git-completion.bash ~/dotfiles/git/.git-completion.bash
+link_shizzle ~/    .gitconfig           ~/dotfiles/git/.gitconfig
+link_shizzle ~/    git-info.sh          ~/dotfiles/git/git-info.sh
+link_shizzle ~/    .tmux.conf           ~/dotfiles/tmux/.tmux.conf
+link_shizzle ~/bin tmuxgo               ~/dotfiles/tmux/tmuxgo
+link_shizzle ~/bin tmuxlogin            ~/dotfiles/tmux/tmuxlogin
 
 source ~/.bashrc
