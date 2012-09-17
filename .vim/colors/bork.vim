@@ -22,10 +22,10 @@ if has("gui_running")
 
 	" -> Text; Miscellaneous
 	hi Normal         guibg=#1F1F1F guifg=#D0D0D0 gui=none
-	hi SpecialKey     guibg=#1F1F1F guifg=#444444 gui=none
+	hi SpecialKey     guibg=#1F1F1F guifg=#585858 gui=none
 	hi VertSplit      guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi SignColumn     guibg=#1F1F1F guifg=#BF81FA gui=none
-	hi NonText        guibg=#1F1F1F guifg=#FC6984 gui=none
+	hi NonText        guibg=#1F1F1F guifg=#585858 gui=none
 	hi Directory      guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi Title          guibg=#1F1F1F guifg=#6DF584 gui=bold
 	hi ColorColumn    guibg=#111111
@@ -110,10 +110,10 @@ elseif &t_Co == 256
 
 	" -> Text; Miscellaneous
 	hi Normal         ctermbg=234  ctermfg=252   cterm=none
-	hi SpecialKey     ctermbg=234  ctermfg=DarkGray   cterm=none
+	hi SpecialKey     ctermbg=234  ctermfg=240   cterm=none
 	hi VertSplit      ctermbg=234  ctermfg=227   cterm=none
 	hi SignColumn     ctermbg=234  ctermfg=141   cterm=none
-	hi NonText        ctermbg=234  ctermfg=204   cterm=none
+	hi NonText        ctermbg=234  ctermfg=240   cterm=none
 	hi Directory      ctermbg=234  ctermfg=227   cterm=none
 	hi Title          ctermbg=234  ctermfg=84    cterm=bold
 	hi ColorColumn    ctermbg=233
