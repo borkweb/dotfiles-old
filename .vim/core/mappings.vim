@@ -5,8 +5,8 @@ let mapleader=","
 " map a to Ack!
 nnoremap <leader>a :Ack 
 
-map <leader>' /'[^']+'<CR>
-map <leader>" /"[^"]+"<CR>
+map <silent> <leader>' /'[^']+'<CR>:nohl<CR>
+map <silent> <leader>" /"[^"]+"<CR>:nohl<CR>
 
 " go back # words
 map <leader>b :b#<CR>
