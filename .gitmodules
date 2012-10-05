@@ -1,0 +1,9 @@
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = git://github.com/vim-scripts/Align.git
+[submodule ".vim/bundle/gundo.vim"]
+	path = .vim/bundle/gundo.vim
+	url = git://github.com/sjl/gundo.vim.git
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git

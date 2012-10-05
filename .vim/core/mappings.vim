@@ -3,7 +3,10 @@ let mapleader=","
 :nnoremap <leader>i :setl noai nocin nosi inde=<CR>
 
 " map a to Ack!
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
+
+map <silent> <leader>' /'[^']+'<CR>:nohl<CR>
+map <silent> <leader>" /"[^"]+"<CR>:nohl<CR>
 
 " go back # words
 map <leader>b :b#<CR>

@@ -1,3 +1,7 @@
+snippet robot
+	do_action( 'debug_robot', "${1:message}" );
+snippet probot
+	do_action( 'debug_robot', print_r( ${1:message}, TRUE ) );
 snippet sql SELECT
 	$${1:sql} = "
 		SELECT ${2:*}
