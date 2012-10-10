@@ -10,6 +10,7 @@
 	user = borkweb
 
 [alias]
+	svn-diff = !~/dotfiles/git-svn-diff.sh
 	co = checkout
 	st = status
 	ci = commit
