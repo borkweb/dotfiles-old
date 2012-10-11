@@ -41,7 +41,7 @@ alias apache='sudo apachectl'
 ##
 alias svnupdry='svn merge --dry-run -r BASE:HEAD .' 
 alias dw="svn diff -x -w"
-alias svimdiff='svn diff --diff-cmd svn-vimdiff'
+alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 
 ##
 ## Git
