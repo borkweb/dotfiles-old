@@ -34,3 +34,12 @@ Once node is installed, get these in place:
 This provides a sweet status bar.  Some [patched
 fonts](https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts)
 will be necessary.
+
+## Other things that should be set up
+
+### WP-CLI
+[WordPress CLI](https://github.com/wp-cli/wp-cli) is awesome.
+
+````
+	git clone --recursive git://github.com/wp-cli/wp-cli.git
+````
