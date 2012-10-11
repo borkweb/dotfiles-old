@@ -41,5 +41,7 @@ will be necessary.
 [WordPress CLI](https://github.com/wp-cli/wp-cli) is awesome.
 
 ````
-	git clone --recursive git://github.com/wp-cli/wp-cli.git
+git clone --recursive git://github.com/wp-cli/wp-cli.git
+cd wp-cli
+sudo utils/dev-build
 ````
