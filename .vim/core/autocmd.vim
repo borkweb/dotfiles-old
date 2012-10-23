@@ -24,6 +24,7 @@ autocmd FileType markdown setlocal wrap linebreak nolist
 
 " PHP Configurations
 """"""""""""""""""""
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set makeprg=php\ -l\ %
 autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
 autocmd FileType php setlocal colorcolumn=100
