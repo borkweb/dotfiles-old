@@ -9,13 +9,14 @@ Homebrew is the key to getting rock and rolling on anything!
 These are the tools that I use all the time.  Brew install ALL THE THINGS!
 
 ````
-brew install ack autojump ctags-exuberant fmdiff lessc node siege tmux
+brew install ack autojump ctags-exuberant fmdiff jslint lessc node siege tmux
 ````
 
 * ack
 * autojump
 * ctags-exuberant _(Used for .vim/bundle/tagbar)_
 * fmdiff
+* jslint
 * lessc
 * node
 * siege
