@@ -60,7 +60,8 @@ set nocindent        " Disables automattic C program indenting
 set hidden
 set modeline
 set modelines=5
-set spr
+set splitbelow       " always put horizontal splits at the bottom
+set splitright       " always put vertical splits on the right
 set sidescrolloff=15 " start scrolling on the side if we are 15 characters from the edge
 set sidescroll=1
 
