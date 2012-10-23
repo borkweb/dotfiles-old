@@ -119,7 +119,6 @@ function TogglePasteMode ()
 
 source ~/.vim/core/autocmd.vim
 source ~/.vim/core/filetypes.vim
-source ~/.vim/core/fuzzy-finder.vim
 source ~/.vim/core/ctags.vim
 source ~/.vim/core/mappings.vim
 source ~/.vim/core/diff.vim
