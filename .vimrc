@@ -98,6 +98,10 @@ set path+=includes/**
 set suffixesadd=.php,.class.php,.inc.php
 set includeexpr=substitute(v:fname,'-$','','g')
 
+" When writing a file, if there are errors, have Syntastic plugin mark them
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
 function! MyTabOrComplete()
 	let col = col('.')-1
 		if !col || getline('.')[col-1] !~ '\k'
