@@ -61,6 +61,8 @@ set hidden
 set modeline
 set modelines=5
 set spr
+set sidescrolloff=15 " start scrolling on the side if we are 15 characters from the edge
+set sidescroll=1
 
 ""
 "" Colors & Theme
