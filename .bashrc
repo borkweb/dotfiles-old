@@ -51,6 +51,9 @@ source ~/.git-completion.bash
 
 . ~/.bash_prompt
 
+## z command
+. `brew --prefix`/etc/profile.d/z.sh
+
 if [[ -f ~/.local_bashrc ]]
 then
 	source ~/.local_bashrc
