@@ -52,3 +52,9 @@
 [submodule ".vim/bundle/zencoding-vim"]
 	path = .vim/bundle/zencoding-vim
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule ".vim/bundle/vim-jquery"]
+	path = .vim/bundle/vim-jquery
+	url = git://github.com/itspriddle/vim-jquery.git
+[submodule ".vim/bundle/vim-json"]
+	path = .vim/bundle/vim-json
+	url = git://github.com/leshill/vim-json.git
