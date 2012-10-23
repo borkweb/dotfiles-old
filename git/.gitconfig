@@ -18,13 +18,14 @@
 	d = difftool
 
 [color]
-	ui = always
-	branch = auto
-	diff = auto
-	status = auto
+	ui = true
 
 [diff]
 	tool = vimdiff
+	noprefix = true
 
 [difftool]
 	prompt = false
+
+[credential]
+	helper = osxkeychain
