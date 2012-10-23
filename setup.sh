@@ -26,6 +26,7 @@ then
 	mkdir ~/bin
 fi
 
+link_shizzle ~/    .ackrc               ~/dotfiles/.ackrc
 link_shizzle ~/    .bash_prompt         ~/dotfiles/.bash_prompt
 link_shizzle ~/    .bashrc              ~/dotfiles/.bashrc
 link_shizzle ~/    .ctags               ~/dotfiles/.ctags
