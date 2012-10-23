@@ -21,9 +21,9 @@ set nowrap                     " don't wrap lines
 set backspace=indent,eol,start " backspace through everything in insert mode
 set autoindent                 " Automatic indentation
 set list                       " Show invisible characters
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=2                  " a tab is 2 spaces
+set softtabstop=2              " tab width while in insert mode
+set shiftwidth=2               " number of spaces to use for autoindenting
 set wrapscan                   " wrap a whole word to the next line
 
 ""
