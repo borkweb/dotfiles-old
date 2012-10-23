@@ -10,7 +10,7 @@ set visualbell
 set cursorline     " highlight the line the cursor is on
 set ttyfast        " helps with repaint
 set laststatus=2   " 2 means all windows will always have a status line
-set textwidth=72   " set text width to 72 characters
+set textwidth=0    " don't auto-wrap lines
 set wildmenu
 set wildmode=list:longest
 
