@@ -46,3 +46,10 @@ git clone --recursive git://github.com/wp-cli/wp-cli.git
 cd wp-cli
 sudo utils/dev-build
 ````
+
+### CodeSniffer
+This gives you the ability to sniff your code to ensure adherence to standards.
+
+````
+sudo pear install PHP_CodeSniffer
+````

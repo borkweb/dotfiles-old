@@ -10,12 +10,14 @@ export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
 export EL4R_HOME="/Users/matt/.el4r"
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
 export EDITOR=vim
 export SVN_EDITOR=vim
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
+export HISTIGNORE="git push*"
 shopt -s histappend
 shopt -s cmdhist
 
@@ -23,6 +25,11 @@ shopt -s cmdhist
 ## Utility
 ##
 alias wacom='killall WacomTabletDriver;open "/Library/Application Support/Tablet/WacomTabletDriver.app"'
+alias gsub='git submodule update --init --recursive'
+alias gup='git pull upstream master;gsub'
+alias gorigin='git push origin HEAD'
+alias gpush='~/utility/gigaom-push.sh'
+alias pcpush='~/utility/paidcontent-push.sh'
 
 ##
 ## Searching & Navigation

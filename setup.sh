@@ -30,6 +30,7 @@ link_shizzle ~/    .ackrc               ~/dotfiles/.ackrc
 link_shizzle ~/    .bash_prompt         ~/dotfiles/.bash_prompt
 link_shizzle ~/    .bashrc              ~/dotfiles/.bashrc
 link_shizzle ~/    .ctags               ~/dotfiles/.ctags
+link_shizzle ~/    .inputrc             ~/dotfiles/.inputrc
 link_shizzle ~/    .screenrc            ~/dotfiles/.screenrc
 link_shizzle ~/    .vimrc               ~/dotfiles/.vimrc
 link_shizzle ~/    .vim                 ~/dotfiles/.vim
