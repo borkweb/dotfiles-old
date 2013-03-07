@@ -29,6 +29,7 @@ fi
 link_shizzle ~/    .ackrc               ~/dotfiles/.ackrc
 link_shizzle ~/    .bash_prompt         ~/dotfiles/.bash_prompt
 link_shizzle ~/    .bashrc              ~/dotfiles/.bashrc
+link_shizzle ~/    .zshrc               ~/dotfiles/.zshrc
 link_shizzle ~/    .ctags               ~/dotfiles/.ctags
 link_shizzle ~/    .inputrc             ~/dotfiles/.inputrc
 link_shizzle ~/    .screenrc            ~/dotfiles/.screenrc
@@ -42,3 +43,4 @@ link_shizzle ~/bin tmuxgo               ~/dotfiles/tmux/tmuxgo
 link_shizzle ~/bin tmuxlogin            ~/dotfiles/tmux/tmuxlogin
 
 source ~/.bashrc
+chsh -s /bin/zsh

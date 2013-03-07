@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/phpcomplete.vim"]
 	path = .vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
+[submodule "powerline-zsh"]
+	path = powerline-zsh
+	url = git@github.com:borkweb/powerline-zsh.git

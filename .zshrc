@@ -14,12 +14,30 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
 export EDITOR=vim
 export SVN_EDITOR=vim
+export TERM='xterm-256color'
 
-export HISTCONTROL=ignoreboth
-export HISTSIZE=10000
-export HISTIGNORE="git push*"
-shopt -s histappend
-shopt -s cmdhist
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+# set shell to use vim bindings
+bindkey -v
+
+# command completion
+zstyle :compinstall filename '/Users/matt/.zshrc'
+autoload -Uz compinit
+compinit
+
+# setup the prompt to use powerline
+function _update_ps1()
+{
+	export PROMPT="$(~/dotfiles/powerline-zsh/powerline-zsh.py $?)"
+}
+
+precmd()
+{
+	_update_ps1
+}
 
 ##
 ## Utility
@@ -35,7 +53,6 @@ alias vi='vim'
 ##
 ## Searching & Navigation
 ##
-alias j='autojump'
 alias pack='ack --pager="less -R"'
 
 ##
@@ -51,20 +68,7 @@ alias svnupdry='svn merge --dry-run -r BASE:HEAD .'
 alias dw="svn diff -x -w"
 alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 
-##
-## Git
-##
-alias gi='. /Users/$USER/git-info.sh'
-source ~/.git-completion.bash
-
-. ~/.bash_prompt
-
 ## z command
 . `brew --prefix`/etc/profile.d/z.sh
-
-if [[ -f ~/.local_bashrc ]]
-then
-	source ~/.local_bashrc
-fi
 
 umask 002
