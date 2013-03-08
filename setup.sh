@@ -29,6 +29,7 @@ fi
 link_shizzle ~/    .ackrc               ~/dotfiles/.ackrc
 link_shizzle ~/    .bash_prompt         ~/dotfiles/.bash_prompt
 link_shizzle ~/    .bashrc              ~/dotfiles/.bashrc
+link_shizzle ~/    .zshenv              ~/dotfiles/.zshenv
 link_shizzle ~/    .zshrc               ~/dotfiles/.zshrc
 link_shizzle ~/    .ctags               ~/dotfiles/.ctags
 link_shizzle ~/    .inputrc             ~/dotfiles/.inputrc
