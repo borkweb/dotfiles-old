@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/snipmate.vim"]
 	path = .vim/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule ".vim/bundle/ack.vim"]
-	path = .vim/bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
@@ -64,3 +61,6 @@
 [submodule "powerline-zsh"]
 	path = powerline-zsh
 	url = git@github.com:borkweb/powerline-zsh.git
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = git@github.com:vim-scripts/ag.vim.git
