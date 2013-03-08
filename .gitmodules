@@ -58,9 +58,12 @@
 [submodule ".vim/bundle/phpcomplete.vim"]
 	path = .vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
-[submodule "powerline-zsh"]
-	path = powerline-zsh
-	url = git@github.com:borkweb/powerline-zsh.git
 [submodule ".vim/bundle/ag.vim"]
 	path = .vim/bundle/ag.vim
 	url = git@github.com:vim-scripts/ag.vim.git
+[submodule "zsh/zsh-syntax-highlighting"]
+	path = zsh/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/powerline-zsh"]
+	path = zsh/powerline-zsh
+	url = git@github.com:borkweb/powerline-zsh.git

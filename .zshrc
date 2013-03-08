@@ -6,7 +6,7 @@
 # setup the prompt to use powerline
 function _update_ps1()
 {
-	export PROMPT="$(~/dotfiles/powerline-zsh/powerline-zsh.py $?)"
+	export PROMPT="$(~/dotfiles/zsh/powerline-zsh/powerline-zsh.py $?)"
 }
 
 precmd()
@@ -47,3 +47,5 @@ alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 . `brew --prefix`/etc/profile.d/z.sh
 
 umask 002
+
+source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
