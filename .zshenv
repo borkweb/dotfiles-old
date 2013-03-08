@@ -23,3 +23,5 @@ SAVEHIST=10000
 # set shell to use vim bindings
 bindkey -v
 
+# enable zsh extended glob
+setopt extended_glob
