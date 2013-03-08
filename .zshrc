@@ -1,7 +1,7 @@
 # command completion
-#zstyle :compinstall filename '/Users/matt/.zshrc'
-#autoload -Uz compinit
-#compinit
+zstyle :compinstall filename '/Users/matt/.zshrc'
+autoload -Uz compinit
+compinit
 
 # setup the prompt to use powerline
 function _update_ps1()
@@ -48,4 +48,5 @@ alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 
 umask 002
 
+source ~/.git-completion.bash
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
