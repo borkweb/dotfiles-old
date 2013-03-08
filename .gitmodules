@@ -67,3 +67,6 @@
 [submodule "zsh/powerline-zsh"]
 	path = zsh/powerline-zsh
 	url = git@github.com:borkweb/powerline-zsh.git
+[submodule "zsh/zsh-completions"]
+	path = zsh/zsh-completions
+	url = git@github.com:zsh-users/zsh-completions.git

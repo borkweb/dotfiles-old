@@ -1,4 +1,5 @@
 # command completion
+fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
 zstyle :compinstall filename '/Users/matt/.zshrc'
 autoload -Uz compinit
 compinit
@@ -13,6 +14,11 @@ precmd()
 {
 	_update_ps1
 }
+
+##
+## Global Aliases
+##
+alias -g L="|less"
 
 ##
 ## Utility
