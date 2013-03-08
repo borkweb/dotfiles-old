@@ -25,3 +25,12 @@ bindkey -v
 
 # enable zsh extended glob
 setopt extended_glob
+
+# enable ! history expansion
+setopt bang_hist
+
+# if the commandline starts with a whitespace, don't add it to history
+setopt hist_ignore_space
+
+# make cd push the old directory to the dirstack
+setopt auto_pushd
