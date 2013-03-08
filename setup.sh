@@ -44,4 +44,4 @@ link_shizzle ~/bin tmuxgo               ~/dotfiles/tmux/tmuxgo
 link_shizzle ~/bin tmuxlogin            ~/dotfiles/tmux/tmuxlogin
 
 source ~/.bashrc
-chsh -s /bin/zsh
+chsh -s /usr/local/bin/zsh

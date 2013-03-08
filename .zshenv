@@ -1,7 +1,7 @@
+export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/bin/:$HOME/:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/mysql/bin:$PATH"
-export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/pear/bin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/share/npm/lib:$PATH"
