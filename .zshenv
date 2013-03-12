@@ -1,3 +1,4 @@
+export PATH="/usr/local/Cellar/subversion/1.7.8/bin/:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/bin/:$HOME/:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -14,7 +15,7 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
 export EDITOR=vim
 export SVN_EDITOR=vim
-export TERM='xterm-256color'
+export TERM='screen-256color'
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -34,3 +35,12 @@ setopt hist_ignore_space
 
 # make cd push the old directory to the dirstack
 setopt auto_pushd
+
+# don't require the "cd" command to enter a directory
+setopt auto_cd
+
+# do not store duplicates in the stack
+setopt pushd_ignore_dups
+
+# do not print the direcotry stack after pushd or popd
+setopt pushd_silent

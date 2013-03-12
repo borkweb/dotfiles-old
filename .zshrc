@@ -31,6 +31,12 @@ alias gpush='~/utility/gigaom-push.sh'
 alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
 
+# verbose directory stack list
+alias d='dirs -v'
+
+# Lists the ten most used commands.
+alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
+
 ##
 ## Searching & Navigation
 ##
