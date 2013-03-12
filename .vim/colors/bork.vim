@@ -19,16 +19,21 @@ set background=dark
 let ruby_operators = 1
 
 if has("gui_running")
-
 	" -> Text; Miscellaneous
 	hi Normal         guibg=#1F1F1F guifg=#D0D0D0 gui=none
 	hi SpecialKey     guibg=#1F1F1F guifg=#585858 gui=none
 	hi VertSplit      guibg=#1F1F1F guifg=#FFEE68 gui=none
-	hi SignColumn     guibg=#1F1F1F guifg=#BF81FA gui=none
+	hi SignColumn     guibg=#000000 guifg=#BF81FA gui=none
 	hi NonText        guibg=#1F1F1F guifg=#585858 gui=none
 	hi Directory      guibg=#1F1F1F guifg=#FFEE68 gui=none
 	hi Title          guibg=#1F1F1F guifg=#6DF584 gui=bold
 	hi ColorColumn    guibg=#111111
+
+	" GitGutter Support
+	hi GitGutterAdd          guibg=#000000 guifg=#0f0f0f        gui=none
+	hi GitGutterChange       guibg=#000000 guifg=#FFFF00        gui=none
+	hi GitGutterDelete       guibg=#000000 guifg=#0f0ff0        gui=none
+	hi GitGutterChangeDelete guibg=#000000 guifg=#FF6600        gui=none
 
 	" -> Cursor
 	hi Cursor         guibg=#FFEE68 guifg=#1F1F1F gui=none
@@ -107,16 +112,21 @@ if has("gui_running")
 	hi htmlUnderlineItalic      guibg=#1F1F1F guifg=#D0D0D0 gui=underline,italic
 
 elseif &t_Co == 256
-
 	" -> Text; Miscellaneous
 	hi Normal         ctermbg=234  ctermfg=252   cterm=none
 	hi SpecialKey     ctermbg=234  ctermfg=240   cterm=none
 	hi VertSplit      ctermbg=234  ctermfg=227   cterm=none
-	hi SignColumn     ctermbg=234  ctermfg=141   cterm=none
+	hi SignColumn     ctermbg=0    ctermfg=141   cterm=none
 	hi NonText        ctermbg=234  ctermfg=240   cterm=none
 	hi Directory      ctermbg=234  ctermfg=227   cterm=none
 	hi Title          ctermbg=234  ctermfg=84    cterm=bold
 	hi ColorColumn    ctermbg=233
+
+	" GitGutter Support
+	hi GitGutterAdd          ctermbg=0 ctermfg=46   cterm=none
+	hi GitGutterChange       ctermbg=0 ctermfg=226  cterm=none
+	hi GitGutterDelete       ctermbg=0 ctermfg=9    cterm=none
+	hi GitGutterChangeDelete ctermbg=0 ctermfg=208  cterm=none
 
 	" -> Cursor
 	hi Cursor         ctermbg=227  ctermfg=234   cterm=none
@@ -195,15 +205,20 @@ elseif &t_Co == 256
 	hi htmlUnderlineItalic      ctermbg=234  ctermfg=252   cterm=underline,italic
 
 elseif &t_Co == 16
-
 	" -> Text; Miscellaneous
 	hi Normal         ctermbg=8  ctermfg=15 cterm=none
 	hi SpecialKey     ctermbg=8  ctermfg=5  cterm=none
 	hi VertSplit      ctermbg=8  ctermfg=14  cterm=none
-	hi SignColumn     ctermbg=8  ctermfg=5  cterm=none
+	hi SignColumn     ctermbg=0  ctermfg=5  cterm=none
   hi NonText        ctermbg=8  ctermfg=4  cterm=none
   hi Directory      ctermbg=8  ctermfg=14  cterm=none
   hi Title          ctermbg=8  ctermfg=10 cterm=bold
+
+	" GitGutter Support
+	hi GitGutterAdd          ctermbg=0 ctermfg=10   cterm=none
+	hi GitGutterChange       ctermbg=0 ctermfg=3    cterm=none
+	hi GitGutterDelete       ctermbg=0 ctermfg=9    cterm=none
+	hi GitGutterChangeDelete ctermbg=0 ctermfg=13   cterm=none
 
   " -> Cursor
   hi Cursor         ctermbg=14 ctermfg=8  cterm=none
@@ -292,6 +307,12 @@ elseif &t_Co == 8
   hi NonText        ctermbg=8  ctermfg=4  cterm=none
   hi Directory      ctermbg=8  ctermfg=6  cterm=none
   hi Title          ctermbg=8  ctermfg=2  cterm=bold
+
+	" GitGutter Support
+	hi GitGutterAdd          ctermbg=0 ctermfg=2   cterm=none
+	hi GitGutterChange       ctermbg=0 ctermfg=3   cterm=none
+	hi GitGutterDelete       ctermbg=0 ctermfg=5   cterm=none
+	hi GitGutterChangeDelete ctermbg=0 ctermfg=7   cterm=none
 
   " -> Cursor
   hi Cursor         ctermbg=6  ctermfg=8  cterm=none

@@ -80,6 +80,10 @@ nnoremap <silent> <Space> @=(foldclosed('.')!=-1?'za':'l')<CR>
 vnoremap <Space> zf
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
+" GitGutter support
+nmap <silent> ]h :<C-U>execute v:count1 . "GitGutterNextHunk"<CR>
+nmap <silent> [h :<C-U>execute v:count1 . "GitGutterPrevHunk"<CR>
+
 " Switch windows with ctrl + hjkl
 map <C-h> <C-w>h
 map <C-j> <C-w>j
