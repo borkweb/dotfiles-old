@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
+[submodule "zsh/powerline-zsh"]
+	path = zsh/powerline-zsh
+	url = git@github.com:borkweb/powerline-zsh.git
