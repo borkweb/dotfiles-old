@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vim-css-color"]
+	path = .vim/bundle/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
