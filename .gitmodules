@@ -73,3 +73,6 @@
 [submodule "zsh/powerline-zsh"]
 	path = zsh/powerline-zsh
 	url = git@github.com:borkweb/powerline-zsh.git
+[submodule ".vim/bundle/PIV"]
+	path = .vim/bundle/PIV
+	url = git://github.com/spf13/PIV.git
