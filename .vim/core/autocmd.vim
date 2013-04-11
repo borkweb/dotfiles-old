@@ -34,9 +34,3 @@ autocmd FileType php setlocal colorcolumn=100
 au BufNewFile,BufReadPost python set shiftwidth=4 expandtab tabstop=4 softtabstop=4
 autocmd FileType python setlocal colorcolumn=80
 autocmd FileType python map <buffer> <F4> :call Flake8()<CR>
-
-" Only show NERDTree by default if no file was specified
-autocmd vimenter * if !argc() | NERDTree | endif
-
-" If NERDTree was the only window left open, go ahead and close vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

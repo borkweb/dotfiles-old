@@ -27,3 +27,11 @@ snippet sql UPDATE
 	";
 snippet req
 	require_once __DIR__ . '/${1:dir}/${2:file}.php';
+snippet func
+	/**
+	 * ${5:comment about function}
+	 */
+	${1:public} function ${2:name}(${4:params})
+	{
+		${6:stuff}
+	}//end ${3:name}
