@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/matt/dotfiles/git/.gitignore_global
 
 [user]
 	name = Matthew Batchelder
