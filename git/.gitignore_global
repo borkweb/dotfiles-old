@@ -37,6 +37,11 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Other stuff #
+# VIM #
 ###############
 *.swp
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
