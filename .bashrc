@@ -64,7 +64,7 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1"
 
 ## z command
-. `brew --prefix`/etc/profile.d/z.sh
+#. `brew --prefix`/etc/profile.d/z.sh
 
 if [[ -f ~/.local_bashrc ]]
 then
