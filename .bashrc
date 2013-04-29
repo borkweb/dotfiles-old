@@ -12,6 +12,7 @@ export PATH="/Users/matt/git/doctorjs/bin:$PATH"
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
+export TERM=xterm-color
 export EDITOR=vim
 export SVN_EDITOR=vim
 
