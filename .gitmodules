@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/vim-multiedit"]
 	path = .vim/bundle/vim-multiedit
 	url = git@github.com:hlissner/vim-multiedit.git
+[submodule "shell/powerline-shell"]
+	path = shell/powerline-shell
+	url = git@github.com:borkweb/powerline-shell.git
