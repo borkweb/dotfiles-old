@@ -56,9 +56,6 @@ alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 ## Git
 ##
 alias gi='. /Users/$USER/git-info.sh'
-#source ~/.git-completion.bash
-
-#. ~/.bash_prompt
 
 function _update_ps1() {
 	export PS1="$(~/dotfiles/shell/powerline-shell/powerline-shell.py $?)"
