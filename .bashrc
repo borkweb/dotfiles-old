@@ -26,12 +26,24 @@ shopt -s cmdhist
 ## Utility
 ##
 alias wacom='killall WacomTabletDriver;open "/Library/Application Support/Tablet/WacomTabletDriver.app"'
-alias gsub='git submodule update --init --recursive'
-alias gup='git pull upstream master;gsub'
-alias gorigin='git push origin HEAD'
-alias gpush='~/utility/gigaom-push.sh'
-alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
+
+##
+## Git
+##
+alias gsub='git submodule update --init --recursive && git submodule --quiet foreach --recursive "git remote set-url --push origin no_push"'
+alias gup='git pull upstream master;gsub'
+alias gop='git pull origin master;gsub'
+alias gorigin='git push origin HEAD'
+alias gmatt='git push matt HEAD'
+alias grz='git remote add zzz `git remote -v|grep origin|grep fetch|sed s/GigaOM/zbtirrell/|awk '"'"'{print $2}'"'"'`'
+alias grm='git remote add matt `git remote -v|grep origin|grep fetch|sed s/GigaOM/borkweb/|awk '"'"'{print $2}'"'"'`'
+alias gnop='git remote set-url origin --push no_push'
+alias gnup='git remote set-url upstream --push no_push'
+
+function gra {
+	git remote add "$1" `git remote -v|grep origin|grep fetch|sed s/GigaOM/${2}/|awk '{print $2}'`
+}
 
 ##
 ## Searching & Navigation
@@ -66,9 +78,9 @@ export PROMPT_COMMAND="_update_ps1"
 ## z command
 #. `brew --prefix`/etc/profile.d/z.sh
 
-if [[ -f ~/.local_bashrc ]]
+if [[ -f ~/local.sh ]]
 then
-	source ~/.local_bashrc
+	source ~/local.sh
 fi
 
 umask 002
