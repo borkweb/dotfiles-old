@@ -10,6 +10,7 @@ export PATH="/usr/local/share/npm/lib/node_modules:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
+export PATH=/usr/local/php5/bin:$PATH
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
@@ -74,6 +75,7 @@ alias wacom='killall WacomTabletDriver;open "/Library/Application Support/Tablet
 alias gpush='~/utility/gigaom-push.sh'
 alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
+alias cs='~/dotfiles/utility/codesniffer-toggle.sh'
 
 # verbose directory stack list
 alias d='dirs -v'
@@ -105,6 +107,13 @@ alias grm='git remote add matt `git remote -v|grep origin|grep fetch|sed s/GigaO
 alias gnop='git remote set-url origin --push no_push'
 alias gnup='git remote set-url upstream --push no_push'
 
+# List all remotes in submodules sans remotes labeled as matt
+alias grls='git submodule --quiet foreach --recursive "git remote -v"|grep -v push|grep -v matt'
+
+# update all submodules to master
+alias gsubup='git submodule --quiet foreach --recursive "git checkout master; git pull"'
+
+# add a remote of $1, pointing to the $2 account on github
 function gra {
 	git remote add "$1" `git remote -v|grep origin|grep fetch|sed s/GigaOM/${2}/|awk '{print $2}'`
 }
@@ -115,6 +124,8 @@ function gra {
 alias svnupdry='svn merge --dry-run -r BASE:HEAD .' 
 alias dw="svn diff -x -w"
 alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
+
+alias composer="php ~/utility/composer.phar"
 
 ## z command
 . `brew --prefix`/etc/profile.d/z.sh

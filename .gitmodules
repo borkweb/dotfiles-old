@@ -85,3 +85,6 @@
 [submodule "shell/powerline-shell"]
 	path = shell/powerline-shell
 	url = git@github.com:borkweb/powerline-shell.git
+[submodule ".vim/bundle/move"]
+	path = .vim/bundle/move
+	url = git@github.com:vim-scripts/move.git
