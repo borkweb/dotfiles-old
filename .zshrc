@@ -108,6 +108,8 @@ alias grz='git remote add zzz `git remote -v|grep origin|grep fetch|sed s/GigaOM
 alias grm='git remote add matt `git remote -v|grep origin|grep fetch|sed s/GigaOM/borkweb/|awk '"'"'{print $2}'"'"'`'
 alias gnop='git remote set-url origin --push no_push'
 alias gnup='git remote set-url upstream --push no_push'
+
+# the gprune and grprune commands were harvested from http://devblog.springest.com/a-script-to-remove-old-git-branches/
 alias gprune="git branch --merged master | grep -v 'master$' | xargs git branch -d"
 function grprune() {
 	echo "The following remote branches are fully merged into master and will be removed:"
