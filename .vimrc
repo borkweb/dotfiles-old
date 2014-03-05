@@ -130,3 +130,10 @@ source ~/.vim/core/ctags.vim
 source ~/.vim/core/mappings.vim
 source ~/.vim/core/diff.vim
 source ~/.vim/core/gui.vim
+
+autocmd BufRead,BufNewFile /Users/matt/git/dark-brotherhood/* set expandtab
+autocmd BufRead,BufNewFile /Users/matt/git/dark-brotherhood/* set tabstop=2
+
+call pathogen#helptags()
+let g:UltiSnipsEditSplit = 'vertical'
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
