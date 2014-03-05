@@ -1,0 +1,126 @@
+snippet req
+require_once __DIR__ . '/${1:components}/${2:file}.php';
+endsnippet
+
+snippet func
+/**
+ * ${4:intelligent comment}
+ */
+${1:public }function ${2:name}(${3: $var })
+{
+}//end $2
+endsnippet
+
+snippet robot
+do_action( 'debug_robot', "${1:message}" );
+endsnippet
+
+snippet probot
+do_action( 'debug_robot', '$1 :: ' . print_r( ${1:var}, TRUE ) );
+endsnippet
+
+snippet singleton "A singleton function"
+/**
+ * singleton funciton
+ */
+function `!p snip.rv = t[1].lower()`()
+{
+	global $`!p snip.rv = t[1].lower()`;
+
+	if ( ! $`!p snip.rv = t[1].lower()` )
+	{
+		$`!p snip.rv = t[1].lower()` = new ${1:class};
+	}//end if
+
+	return $`!p snip.rv = t[1].lower()`;
+}//end `!p snip.rv = t[1].lower()`
+endsnippet
+
+snippet goclass "A gigaom class"
+class ${1:class}
+{
+	/**
+	 * constructor
+	 */
+	public function __construct()
+	{
+	}//end __construct
+}//end class
+
+/**
+ * singleton function
+ */
+function `!p snip.rv = t[1].lower()`()
+{
+	global $`!p snip.rv = t[1].lower()`;
+
+	if ( ! $`!p snip.rv = t[1].lower()` )
+	{
+		$`!p snip.rv = t[1].lower()` = new $1;
+	}//end if
+
+	return $`!p snip.rv = t[1].lower()`;
+}//end `!p snip.rv = t[1].lower()`
+endsnippet
+
+snippet gopluginclass "A gigaom class"
+class ${1:class}
+{
+	/**
+	 * constructor
+	 */
+	public function __construct()
+	{
+		add_action( 'init', array( $this, 'init' ) );
+	}//end __construct
+
+	/**
+	 * hooked into the init action
+	 */
+	 public function init()
+	 {
+	 }//end init
+}//end class
+
+/**
+ * singleton function
+ */
+function `!p snip.rv = t[1].lower()`()
+{
+	global $`!p snip.rv = t[1].lower()`;
+
+	if ( ! $`!p snip.rv = t[1].lower()` )
+	{
+		$`!p snip.rv = t[1].lower()` = new $1;
+	}//end if
+
+	return $`!p snip.rv = t[1].lower()`;
+}//end `!p snip.rv = t[1].lower()`
+endsnippet
+
+snippet addaction
+add_action( '${1:action}', array( $this, '$1' ) );
+endsnippet
+
+snippet action
+/**
+ * Hooked to the $2 action
+ */
+${1:public }function ${2:name}()
+{
+}//end $2
+endsnippet
+
+snippet addfilter
+add_filter( '${1:filter}', array( $this, '$1' ) );
+endsnippet
+
+snippet filter
+/**
+ * Hooked to the $2 filter
+ */
+${1:public }function ${2:name}( $${3:var} )
+{
+	return $${3};
+}//end $2
+endsnippet

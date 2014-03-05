@@ -9,14 +9,16 @@ Homebrew is the key to getting rock and rolling on anything!
 These are the tools that I use all the time.  Brew install ALL THE THINGS!
 
 ````
-brew install autojump ctags-exuberant fmdiff jslint node siege the_silver_searcher tmux zsh
+brew install autojump ctags-exuberant hub fmdiff jslint node reattach-to-user-namespace siege the_silver_searcher tmux zsh
 ````
 
 * autojump
 * ctags-exuberant _(Used for .vim/bundle/tagbar)_
 * fmdiff
+* hub
 * jslint
 * node
+* reattach-to-user-namespace (enables pbcopy, chromedriver, etc from tmux)
 * siege
 * the_silver_searcher
 * tmux

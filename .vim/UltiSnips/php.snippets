@@ -1,0 +1,20 @@
+snippet singleton "A singleton function"
+/**
+ * singleton funciton
+ */
+function ${1:function}()
+{
+	global $${1};
+
+	if ( ! $${1} )
+	{
+		$${1} = new ${2:class};
+	}//end if
+
+	return $${1};
+}//end ${1}
+endsnippet
+
+snippet array "array"
+$${1:arrayName} = array('${2}' => ${3});${4}
+endsnippet
