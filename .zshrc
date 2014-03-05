@@ -1,6 +1,6 @@
-export PATH="/usr/local/Cellar/subversion/1.7.8/bin/:$PATH"
+export PATH="/usr/local/Cellar/subversion/1.7.8/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
-export PATH=$HOME/bin/:$HOME/:$PATH
+export PATH=$HOME/bin:$HOME:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$HOME/pear/bin:$PATH
@@ -76,6 +76,7 @@ alias gpush='~/utility/gigaom-push.sh'
 alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
 alias cs='~/dotfiles/utility/codesniffer-toggle.sh'
+alias selenium='java -jar ~/bin/selenium-server-standalone-2.33.0.jar -browserSessionReuse -Dwebdriver.chrome.driver=bin/chromedriververbose'
 
 # verbose directory stack list
 alias d='dirs -v'
@@ -97,6 +98,7 @@ alias apache='sudo apachectl'
 ##
 ## Git
 ##
+alias git=hub
 alias gsub='git submodule update --init --recursive && git submodule --quiet foreach --recursive "git remote set-url --push origin no_push"'
 alias gup='git pull upstream master;gsub'
 alias gop='git pull origin master;gsub'
@@ -106,6 +108,20 @@ alias grz='git remote add zzz `git remote -v|grep origin|grep fetch|sed s/GigaOM
 alias grm='git remote add matt `git remote -v|grep origin|grep fetch|sed s/GigaOM/borkweb/|awk '"'"'{print $2}'"'"'`'
 alias gnop='git remote set-url origin --push no_push'
 alias gnup='git remote set-url upstream --push no_push'
+alias gprune="git branch --merged master | grep -v 'master$' | xargs git branch -d"
+function grprune() {
+	echo "The following remote branches are fully merged into master and will be removed:"
+	git branch -r --merged master | sed 's/ *matt\///' | grep -v 'master$'
+
+	read -q "REPLY?Continue (y/n)? "
+	if [[ $REPLY = "y" ]]
+	then
+		# Remove remote fully merged branches
+		git branch -r --merged master | sed 's/ *matt\///' | grep -v 'master$' | xargs -I% git push matt :%
+
+		echo "Done!"
+	fi
+}
 
 # List all remotes in submodules sans remotes labeled as matt
 alias grls='git submodule --quiet foreach --recursive "git remote -v"|grep -v push|grep -v matt'
@@ -134,3 +150,50 @@ umask 002
 
 source ~/.git-completion.bash
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# configuration for profile 'default':
+chpwd_profile_default()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: default"
+
+	export GIT_AUTHOR_EMAIL="borkweb@gmail.com"
+	export GIT_COMMITTER_EMAIL="borkweb@gmail.com"
+	export GIT_AUTHOR_NAME="Matthew Batchelder"
+	export GIT_COMMITTER_NAME="Matthew Batchelder"
+}
+
+# configuration for profile 'fun':
+chpwd_profile_djb()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="orv.dessrx@gmail.com"
+	export GIT_COMMITTER_EMAIL="orv.dessrx@gmail.com"
+	export GIT_AUTHOR_NAME="Orv Dessrx"
+	export GIT_COMMITTER_NAME="Orv Dessrx"
+}
+
+#
+# Thanks to: Michael Prokop. 
+# More documentation: 
+# http://git.grml.org/?p=grml-etc-core.git;f=etc/zsh/zshrc;hb=HEAD#l1120
+#
+CHPWD_PROFILE='default'
+function chpwd_profiles() {
+	local -x profile
+
+	zstyle -s ":chpwd:profiles:${PWD}" profile profile || profile='default'
+	if (( ${+functions[chpwd_profile_$profile]} )) ; then
+		chpwd_profile_${profile}
+	fi
+
+	CHPWD_PROFILE="${profile}"
+	return 0
+}
+chpwd_functions=( ${chpwd_functions} chpwd_profiles )
+
+chpwd_profile_default # run DEFAULT profile automatically
+
+zstyle ':chpwd:profiles:/Users/matt/git/dark-brotherhood(|/|/*)'   profile djb
