@@ -24,6 +24,21 @@ brew install autojump ctags-exuberant hub fmdiff jslint node reattach-to-user-na
 * tmux
 * zsh
 
+#### [Brew Cask](https://github.com/caskroom/homebrew-cask)
+
+This allows you to brew install binaries!
+
+```
+brew tap caskroom/cask
+brew install brew-cask
+```
+
+##### Some [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
+
+```
+brew cask install qlstephen qlmarkdown quicklook-csv qlprettypatch betterzipql
+```
+
 ### Stuff to node install
 Once node is installed, get these in place:
 
