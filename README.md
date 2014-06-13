@@ -9,7 +9,9 @@ Homebrew is the key to getting rock and rolling on anything!
 These are the tools that I use all the time.  Brew install ALL THE THINGS!
 
 ````
-brew install autojump ctags-exuberant hub fmdiff jslint node reattach-to-user-namespace rsyslog siege the_silver_searcher tmux zsh
+brew install autojump ctags-exuberant hub fmdiff jslint node \
+reattach-to-user-namespace rsyslog siege the_silver_searcher \
+tmux zsh
 ````
 
 * autojump
@@ -32,6 +34,15 @@ This allows you to brew install binaries!
 ```
 brew tap caskroom/cask
 brew install brew-cask
+```
+
+##### Necessary apps
+
+```
+brew cask install adobe-creative-cloud atom dropbox firefox \
+google-chrome google-drive handbrake hipchat iterm2 limechat livereload \
+minecraft mudlet sequel-pro skype spark tinygrab vagrant virtualbox vlc \
+wacom-tablet
 ```
 
 ##### Some [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
