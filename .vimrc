@@ -104,6 +104,13 @@ set includeexpr=substitute(v:fname,'-$','','g')
 " When writing a file, if there are errors, have Syntastic plugin mark them
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_scss_checkers = ['scss_lint']
+"let g:syntastic_scss_scsslint_args = '--config=/Users/matt/.scss-lint.yml'
+
+let g:tagbar_type_javascript = {
+	\ 'ctagsbin' : '/usr/local/bin/jsctags'
+\ }
 
 function! MyTabOrComplete()
 	let col = col('.')-1

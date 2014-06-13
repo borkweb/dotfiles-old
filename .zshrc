@@ -4,12 +4,13 @@ export PATH=$HOME/bin:$HOME:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$HOME/pear/bin:$PATH
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/share/npm/lib:$PATH"
 export PATH="/usr/local/share/npm/lib/node_modules:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby/2.0.0-p195/bin:$PATH"
 export PATH=/usr/local/php5/bin:$PATH
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
@@ -98,7 +99,6 @@ alias apache='sudo apachectl'
 ##
 ## Git
 ##
-alias git=hub
 alias gsub='git submodule update --init --recursive && git submodule --quiet foreach --recursive "git remote set-url --push origin no_push"'
 alias gup='git pull upstream master;gsub'
 alias gop='git pull origin master;gsub'
