@@ -11,7 +11,7 @@ export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
 export PATH="/usr/local/Cellar/ruby/2.0.0-p195/bin:$PATH"
-export PATH=/usr/local/php5/bin:$PATH
+export PATH=/usr/local/Cellar/php55/5.5.18/bin:$PATH
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
@@ -78,6 +78,9 @@ alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
 alias cs='~/dotfiles/utility/codesniffer-toggle.sh'
 alias selenium='java -jar ~/bin/selenium-server-standalone-2.33.0.jar -browserSessionReuse -Dwebdriver.chrome.driver=bin/chromedriververbose'
+alias gogo='cd ~/www/sites/gigaom/wp-content/themes/vip/gigaom4-child'
+alias gopro='cd ~/www/sites/pro/application/content'
+alias hipchat='node /Users/matt/git/jarvis/bin/hipchat/hipchat.js'
 
 # verbose directory stack list
 alias d='dirs -v'
@@ -108,6 +111,11 @@ alias grz='git remote add zzz `git remote -v|grep origin|grep fetch|sed s/GigaOM
 alias grm='git remote add matt `git remote -v|grep origin|grep fetch|sed s/GigaOM/borkweb/|awk '"'"'{print $2}'"'"'`'
 alias gnop='git remote set-url origin --push no_push'
 alias gnup='git remote set-url upstream --push no_push'
+alias git=hub
+
+function gupstream() {
+	git branch --set-upstream-to=$1/$2 $2
+}
 
 # the gprune and grprune commands were harvested from http://devblog.springest.com/a-script-to-remove-old-git-branches/
 alias gprune="git branch --merged master | grep -v 'master$' | xargs git branch -d"
@@ -145,12 +153,16 @@ alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 
 alias composer="php ~/utility/composer.phar"
 
+## WordPress CLI commands
+alias wp-accounts="wp --url='accounts.local.gostage.it' --path='/Library/WebServer/Documents/sites/pro/application/wordpress/'"
+alias wp-search="wp --url='search.local.gostage.it' --path='/Library/WebServer/Documents/sites/pro/application/wordpress/'"
+
 ## z command
 . `brew --prefix`/etc/profile.d/z.sh
 
 umask 002
 
-source ~/.git-completion.bash
+source ~/.git-completion.zsh
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # configuration for profile 'default':

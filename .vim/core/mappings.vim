@@ -89,3 +89,15 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" wordpress.vim: Search WordPress codex
+nnoremap <leader>co :Wcodexsearch<CR>
+vnoremap <leader>co :Wcodexsearch<CR>
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+
+let g:wordpress_vim_wordpress_path = '/Users/matt/git/wordpress/'
