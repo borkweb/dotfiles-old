@@ -1,6 +1,6 @@
 [submodule ".vim/bundle/Align"]
 	path = .vim/bundle/Align
-	url = git://github.com/vim-scripts/Align.git
+	url = https://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
@@ -94,3 +94,12 @@
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule ".vim/bundle/vim-move"]
+	path = .vim/bundle/vim-move
+	url = https://github.com/matze/vim-move.git
+[submodule ".vim/bundle/vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
