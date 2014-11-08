@@ -70,9 +70,6 @@
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
-[submodule "zsh/powerline-zsh"]
-	path = zsh/powerline-zsh
-	url = git@github.com:borkweb/powerline-zsh.git
 [submodule ".vim/bundle/PIV"]
 	path = .vim/bundle/PIV
 	url = git://github.com/spf13/PIV.git
@@ -82,9 +79,6 @@
 [submodule ".vim/bundle/vim-multiedit"]
 	path = .vim/bundle/vim-multiedit
 	url = git@github.com:hlissner/vim-multiedit.git
-[submodule "shell/powerline-shell"]
-	path = shell/powerline-shell
-	url = git@github.com:borkweb/powerline-shell.git
 [submodule ".vim/bundle/move"]
 	path = .vim/bundle/move
 	url = git@github.com:vim-scripts/move.git
