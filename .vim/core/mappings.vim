@@ -54,9 +54,6 @@ nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
-" Configure tagbar
-nmap <F6> :TagbarToggle<CR>
-
 " Toggle the awesome undo tree visualizer
 map <F5> :GundoToggle<CR>
 
@@ -94,10 +91,10 @@ map <C-l> <C-w>l
 nnoremap <leader>co :Wcodexsearch<CR>
 vnoremap <leader>co :Wcodexsearch<CR>
 
-" Supertab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 let g:wordpress_vim_wordpress_path = '/Users/matt/git/wordpress/'

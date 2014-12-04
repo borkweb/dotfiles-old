@@ -1,4 +1,5 @@
-export PATH="/usr/local/Cellar/subversion/1.7.8/bin:$PATH"
+export PATH=/usr/local/Cellar/vim/7.4.488/bin:$PATH
+export PATH="/usr/local/Cellar/subversion/1.8.10_1/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/bin:$HOME:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -11,7 +12,7 @@ export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
 export PATH="/usr/local/Cellar/ruby/2.0.0-p195/bin:$PATH"
-export PATH=/usr/local/Cellar/php55/5.5.18/bin:$PATH
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
@@ -54,15 +55,10 @@ autoload -Uz compinit
 compinit
 
 # setup the prompt to use powerline
-function _update_ps1()
-{
-	export PROMPT="$(~/dotfiles/zsh/powerline-zsh/powerline-zsh.py $?)"
-}
+. ~/dotfiles/powerline/powerline/bindings/zsh/powerline.zsh
 
-precmd()
-{
-	_update_ps1
-}
+# setup z
+. `brew --prefix`/etc/profile.d/z.sh
 
 ##
 ## Global Aliases
