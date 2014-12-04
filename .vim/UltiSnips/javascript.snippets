@@ -9,3 +9,97 @@ endsnippet
 snippet cd "console.dir(...)" b
 console.dir( $0 );
 endsnippet
+
+snippet ofunc "Object function" b
+${1:function} = function(${2:params}) {
+};
+endsnippet
+
+snippet closure "Closure" b
+( function( $ ) {
+	'use strict';
+} )( jQuery );
+endsnippet
+
+snippet plugin "Plugin with closure and init" b
+if ( 'undefined' === typeof ${1:object name} ) {
+	var `!p snip.rv = t[1].lower()` = {};
+}//end if
+
+( function( $ ) {
+	'use strict';
+
+	/**
+	 * initialize the plugin
+	 */
+	`!p snip.rv = t[1].lower()`.init = function() {
+	};
+
+	$( function() {
+		`!p snip.rv = t[1].lower()`.init();
+	} );
+} )( jQuery );
+endsnippet
+
+snippet on "$(document).on"
+$( ${1:document} ).on( '${2:event}', '${3:selector}', ${4:function} );
+endsnippet
+
+snippet onc "$(document).on with closure"
+$( ${1:document} ).on( '${2:event}', '${3:selector}', function( e ) {
+} );
+endsnippet
+
+snippet jq "$()"
+$( ${1:find} )
+endsnippet
+
+snippet jqvar "var $x = $();"
+var $${1:var} = $( ${2:find} );
+endsnippet
+
+snippet jqovar "object.$x = $()"
+${1:object}.$${2:var} = $( ${3:find} );
+endsnippet
+
+snippet jqid "$( doc.getElementById )"
+$( document.getElementById( '${1:find}' ) )
+endsnippet
+
+snippet jqidvar "var $x = $( doc.getElementById );"
+var $${1:var} = $( document.getElementById( '${2:find}' ) );
+endsnippet
+
+snippet jqoidvar "object.$x = $( doc.getElementById );"
+${1:object}.$${2:var} = $( document.getElementById( '${3:find}' ) );
+endsnippet
+
+snippet foreach
+for ( var ${1:index} in ${2:var} ) {
+}//end for
+endsnippet
+
+snippet for
+for ( ${1:init}; ${2:conditional}; ${3:increment} ) {
+}//end for
+endsnippet
+
+snippet while
+while ( ${1:conditional} ) {
+}//end while
+endsnippet
+
+snippet if
+if ( ${1:conditional} ) {
+}//end if
+endsnippet
+
+snippet elseif
+else if ( ${1:conditional} ) {
+}//end else if
+endsnippet
+
+snippet else
+else {
+}//end else
+endsnippet
