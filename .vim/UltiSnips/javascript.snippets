@@ -10,21 +10,30 @@ snippet cd "console.dir(...)" b
 console.dir( $0 );
 endsnippet
 
-snippet ofunc "Object function" b
+snippet func "Function" b
+function ${1:function}(${2:params}) {
+	$0
+}//end $1
+endsnippet
+
+snippet func "Object function" b
 ${1:function} = function(${2:params}) {
-};
+	$0
+}; // end $1
 endsnippet
 
 snippet closure "Closure" b
 ( function( $ ) {
 	'use strict';
+
+	$0
 } )( jQuery );
 endsnippet
 
 snippet plugin "Plugin with closure and init" b
 if ( 'undefined' === typeof ${1:object name} ) {
-	var `!p snip.rv = t[1].lower()` = {};
-}//end if
+	var $1 = {};
+} // end if
 
 ( function( $ ) {
 	'use strict';
@@ -32,74 +41,82 @@ if ( 'undefined' === typeof ${1:object name} ) {
 	/**
 	 * initialize the plugin
 	 */
-	`!p snip.rv = t[1].lower()`.init = function() {
+	$1.init = function() {
+		$0
 	};
 
 	$( function() {
-		`!p snip.rv = t[1].lower()`.init();
+		$1.init();
 	} );
 } )( jQuery );
 endsnippet
 
-snippet on "$(document).on"
+snippet on "Event binding"
 $( ${1:document} ).on( '${2:event}', '${3:selector}', ${4:function} );
 endsnippet
 
-snippet onc "$(document).on with closure"
+snippet on "Event binding with closure"
 $( ${1:document} ).on( '${2:event}', '${3:selector}', function( e ) {
+	$0
 } );
 endsnippet
 
-snippet jq "$()"
+snippet jq "jQuery find"
 $( ${1:find} )
 endsnippet
 
-snippet jqvar "var $x = $();"
-var $${1:var} = $( ${2:find} );
-endsnippet
-
-snippet jqovar "object.$x = $()"
-${1:object}.$${2:var} = $( ${3:find} );
-endsnippet
-
-snippet jqid "$( doc.getElementById )"
+snippet jq "jQuery find by ID"
 $( document.getElementById( '${1:find}' ) )
 endsnippet
 
-snippet jqidvar "var $x = $( doc.getElementById );"
+snippet jqvar "Standard var"
+var $${1:var} = $( ${2:find} );
+endsnippet
+
+snippet jqvar "Standard var by ID"
 var $${1:var} = $( document.getElementById( '${2:find}' ) );
 endsnippet
 
-snippet jqoidvar "object.$x = $( doc.getElementById );"
+snippet jqvar "Object var"
+${1:object}.$${2:var} = $( ${3:find} );
+endsnippet
+
+snippet jqvar "Object var by ID"
 ${1:object}.$${2:var} = $( document.getElementById( '${3:find}' ) );
 endsnippet
 
 snippet foreach
 for ( var ${1:index} in ${2:var} ) {
+	$0
 }//end for
 endsnippet
 
 snippet for
 for ( ${1:init}; ${2:conditional}; ${3:increment} ) {
+	$0
 }//end for
 endsnippet
 
 snippet while
 while ( ${1:conditional} ) {
+	$0
 }//end while
 endsnippet
 
 snippet if
 if ( ${1:conditional} ) {
+	$0
 }//end if
 endsnippet
 
 snippet elseif
 else if ( ${1:conditional} ) {
+	$0
 }//end else if
 endsnippet
 
 snippet else
 else {
+	$0
 }//end else
 endsnippet

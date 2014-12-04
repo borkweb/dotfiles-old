@@ -1,25 +1,38 @@
-snippet req "require_once"
-require_once __DIR__ . '/${1:components}/${2:file}.php';
+snippet req "require"
+require __DIR__ . '/${1:file}.php';
 endsnippet
 
-snippet robot "debug robot"
+snippet req "require_once"
+require_once __DIR__ . '/${1:file}.php';
+endsnippet
+
+snippet inc "include"
+include __DIR__ . '/${1:file}.php';
+endsnippet
+
+snippet inc "include_once"
+include_once __DIR__ . '/${1:file}.php';
+endsnippet
+
+snippet ro "debug robot"
 do_action( 'debug_robot', "${1:message}" );
 endsnippet
 
-snippet probot "debug robot print_r"
+snippet pro "debug robot print_r"
 do_action( 'debug_robot', '$1 :: ' . print_r( ${1:var}, TRUE ) );
 endsnippet
 
-snippet func "function with comment"
+snippet func "Standard function"
 /**
  * ${4:intelligent comment}
  */
 ${1:public }function ${2:name}(${3: $var })
 {
+	$0
 }//end $2
 endsnippet
 
-snippet singleton "A singleton function"
+snippet sin "A singleton function"
 /**
  * singleton funciton
  */
@@ -36,7 +49,7 @@ function `!p snip.rv = t[1].lower()`()
 }//end `!p snip.rv = t[1].lower()`
 endsnippet
 
-snippet goclass "A gigaom class"
+snippet class "Gigaom class"
 class ${1:class}
 {
 	/**
@@ -44,6 +57,7 @@ class ${1:class}
 	 */
 	public function __construct()
 	{
+		$0
 	}//end __construct
 }//end class
 
@@ -63,7 +77,35 @@ function `!p snip.rv = t[1].lower()`()
 }//end `!p snip.rv = t[1].lower()`
 endsnippet
 
-snippet gopluginclass "A gigaom class"
+snippet class "Gigaom plugin class"
+class ${1:class}
+{
+	/**
+	 * constructor
+	 */
+	public function __construct()
+	{
+		$0
+	}//end __construct
+}//end class
+
+/**
+ * singleton function
+ */
+function `!p snip.rv = t[1].lower()`()
+{
+	global $`!p snip.rv = t[1].lower()`;
+
+	if ( ! $`!p snip.rv = t[1].lower()` )
+	{
+		$`!p snip.rv = t[1].lower()` = new $1;
+	}//end if
+
+	return $`!p snip.rv = t[1].lower()`;
+}//end `!p snip.rv = t[1].lower()`
+endsnippet
+
+snippet class "Gigaom plugin class with init action"
 class ${1:class}
 {
 	/**
@@ -98,24 +140,25 @@ function `!p snip.rv = t[1].lower()`()
 }//end `!p snip.rv = t[1].lower()`
 endsnippet
 
-snippet addaction "Add action"
+snippet add "Add action"
 add_action( '${1:action}', array( $this, '$1' ) );
 endsnippet
 
-snippet action "Action function"
+snippet func "Action function"
 /**
  * Hooked to the $2 action
  */
-${1:public }function ${2:name}()
+${1:public }function ${2:name}(${3: vars })
 {
+	$0
 }//end $2
 endsnippet
 
-snippet addfilter "Add filter"
+snippet add "Add filter"
 add_filter( '${1:filter}', array( $this, '$1' ) );
 endsnippet
 
-snippet filter "Filter function"
+snippet func "Filter function"
 /**
  * Hooked to the $2 filter
  */
@@ -125,44 +168,51 @@ ${1:public }function ${2:name}( $${3:var} )
 }//end $2
 endsnippet
 
-snippet for
+snippet for "For loop"
 for ( ${1:index}; ${2:conditional}; ${3:increment} )
 {
+	$0
 }//end for
 endsnippet
 
-snippet foreach
+snippet foreach "Foreach"
 foreach ( $${1:from} as $${2:var} )
 {
+	$0
 }//end foreach
 endsnippet
 
-snippet foreachk "Foreach with key"
+snippet foreach "Foreach with key"
 foreach ( $${1:from} as $${2:key} => $${3:var} )
 {
+	$0
 }//end foreach
 endsnippet
 
-snippet while
+snippet while "While loop"
 while ( ${1:conditional} )
 {
+	$0
 }//end while
 endsnippet
 
-snippet if
+snippet if "If conditional"
 if ( ${1:conditional} )
 {
+	$0
 }//end if
 endsnippet
 
-snippet elseif
+snippet elseif "Elseif conditional"
 elseif ( ${1:conditional} )
 {
+	$0
 }//end elseif
 endsnippet
 
-snippet else
+snippet else "Else"
 else
 {
+	$0
 }//end else
 endsnippet
