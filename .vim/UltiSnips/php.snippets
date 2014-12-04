@@ -169,9 +169,8 @@ ${1:public }function ${2:name}( $${3:var} )
 endsnippet
 
 snippet for "For loop"
-for ( ${1:index}; ${2:conditional}; ${3:increment} )
+for ( $${2:i} = ${3:0}; $$2 < ${1:count}; $$2${4:++} )
 {
-	$0
 }//end for
 endsnippet
 
@@ -215,4 +214,13 @@ else
 {
 	$0
 }//end else
+endsnippet
+
+snippet time "Time a process"
+$start = microtime( true );
+
+${VISUAL}
+
+$end = microtime( true );
+echo '${1:message}: ', $end - $start, ' seconds', "\n";
 endsnippet
