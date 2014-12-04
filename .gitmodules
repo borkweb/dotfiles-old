@@ -79,9 +79,6 @@
 [submodule ".vim/bundle/move"]
 	path = .vim/bundle/move
 	url = git@github.com:vim-scripts/move.git
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
