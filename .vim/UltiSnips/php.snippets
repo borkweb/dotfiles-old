@@ -1,16 +1,16 @@
-snippet req
+snippet req "require_once"
 require_once __DIR__ . '/${1:components}/${2:file}.php';
 endsnippet
 
-snippet robot
+snippet robot "debug robot"
 do_action( 'debug_robot', "${1:message}" );
 endsnippet
 
-snippet probot
+snippet probot "debug robot print_r"
 do_action( 'debug_robot', '$1 :: ' . print_r( ${1:var}, TRUE ) );
 endsnippet
 
-snippet func
+snippet func "function with comment"
 /**
  * ${4:intelligent comment}
  */
@@ -98,11 +98,11 @@ function `!p snip.rv = t[1].lower()`()
 }//end `!p snip.rv = t[1].lower()`
 endsnippet
 
-snippet addaction
+snippet addaction "Add action"
 add_action( '${1:action}', array( $this, '$1' ) );
 endsnippet
 
-snippet action
+snippet action "Action function"
 /**
  * Hooked to the $2 action
  */
@@ -111,11 +111,11 @@ ${1:public }function ${2:name}()
 }//end $2
 endsnippet
 
-snippet addfilter
+snippet addfilter "Add filter"
 add_filter( '${1:filter}', array( $this, '$1' ) );
 endsnippet
 
-snippet filter
+snippet filter "Filter function"
 /**
  * Hooked to the $2 filter
  */
@@ -125,8 +125,20 @@ ${1:public }function ${2:name}( $${3:var} )
 }//end $2
 endsnippet
 
+snippet for
+for ( ${1:index}; ${2:conditional}; ${3:increment} )
+{
+}//end for
+endsnippet
+
 snippet foreach
-foreach ( $${1:from} as $${2:to} )
+foreach ( $${1:from} as $${2:var} )
+{
+}//end foreach
+endsnippet
+
+snippet foreachk "Foreach with key"
+foreach ( $${1:from} as $${2:key} => $${3:var} )
 {
 }//end foreach
 endsnippet
