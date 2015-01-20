@@ -91,6 +91,9 @@ map <C-l> <C-w>l
 nnoremap <leader>co :Wcodexsearch<CR>
 vnoremap <leader>co :Wcodexsearch<CR>
 
+" pbcopy current file
+map <leader>pb :!cat %\|pbcopy<CR><CR>
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"

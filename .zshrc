@@ -20,6 +20,8 @@ export EDITOR=vim
 export SVN_EDITOR=vim
 export TERM='screen-256color'
 
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
