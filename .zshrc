@@ -1,10 +1,12 @@
+export PATH=/usr/local/php5/bin:$PATH
+export PATH=$HOME/pear/bin:$PATH
 export PATH=/usr/local/Cellar/vim/7.4.488/bin:$PATH
 export PATH="/usr/local/Cellar/subversion/1.8.10_1/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/bin:$HOME:$PATH
+export PATH=$HOME/git/tribe-plugin-packager:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/mysql/bin:$PATH"
-export PATH=$HOME/pear/bin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/share/npm/lib:$PATH"
 export PATH="/usr/local/share/npm/lib/node_modules:$PATH"
@@ -12,15 +14,33 @@ export PATH="/Users/matt/sdk/android-sdk-macosx/tools:$PATH"
 export PATH="/Users/matt/sdk/android-sdk-macosx/platform-tools:$PATH"
 export PATH="/Users/matt/git/doctorjs/bin:$PATH"
 export PATH="/usr/local/Cellar/ruby/2.0.0-p195/bin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export EL4R_HOME="/Users/matt/.el4r"
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TMUX_SERVER_COLOR=green
 export EDITOR=vim
 export SVN_EDITOR=vim
 export TERM='screen-256color'
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+#export TERM=xterm-color
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# Set up docker environment variables
+#eval "$(boot2docker shellinit 2> /dev/null)"
+
+function ldocker {
+	echo 'Setting Docker info to point at local'
+	export DOCKER_HOST=tcp://192.168.59.103:2376
+	export DOCKER_CERT_PATH=/Users/matt/.boot2docker/certs/boot2docker-vm
+	export DOCKER_TLS_VERIFY=1
+}
+
+function jdocker {
+	echo 'Setting Docker info to point at Joyent'
+	export DOCKER_HOST=tcp://us-east-1.docker.joyent.com:2376
+	export DOCKER_CERT_PATH=/Users/matt/.sdc/docker/moderntribe
+	export DOCKER_TLS_VERIFY=1
+}
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -75,7 +95,7 @@ alias gpush='~/utility/gigaom-push.sh'
 alias pcpush='~/utility/paidcontent-push.sh'
 alias vi='vim'
 alias cs='~/dotfiles/utility/codesniffer-toggle.sh'
-alias selenium='java -jar ~/bin/selenium-server-standalone-2.33.0.jar -browserSessionReuse -Dwebdriver.chrome.driver=bin/chromedriververbose'
+alias selenium='java -jar ~/bin/selenium-server-standalone-2.45.0.jar'
 alias gogo='cd ~/www/sites/gigaom/wp-content/themes/vip/gigaom4-child'
 alias gopro='cd ~/www/sites/pro/application/content'
 alias hipchat='node /Users/matt/git/jarvis/bin/hipchat/hipchat.js'
@@ -149,7 +169,7 @@ alias svnupdry='svn merge --dry-run -r BASE:HEAD .'
 alias dw="svn diff -x -w"
 alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 
-alias composer="php ~/utility/composer.phar"
+alias composer="php ~/bin/composer.phar"
 
 ## WordPress CLI commands
 alias wp-accounts="wp --url='accounts.local.gostage.it' --path='/Library/WebServer/Documents/sites/pro/application/wordpress/'"

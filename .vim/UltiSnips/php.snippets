@@ -26,8 +26,7 @@ snippet func "Standard function"
 /**
  * ${4:intelligent comment}
  */
-${1:public }function ${2:name}(${3: $var })
-{
+${1:public }function ${2:name}(${3: $var }) {
 	$0
 }//end $2
 endsnippet
@@ -36,12 +35,10 @@ snippet sin "A singleton function"
 /**
  * singleton funciton
  */
-function `!p snip.rv = t[1].lower()`()
-{
+function `!p snip.rv = t[1].lower()`() {
 	global $`!p snip.rv = t[1].lower()`;
 
-	if ( ! $`!p snip.rv = t[1].lower()` )
-	{
+	if ( ! $`!p snip.rv = t[1].lower()` ) {
 		$`!p snip.rv = t[1].lower()` = new ${1:class};
 	}//end if
 
@@ -50,13 +47,11 @@ function `!p snip.rv = t[1].lower()`()
 endsnippet
 
 snippet class "Gigaom class"
-class ${1:class}
-{
+class ${1:class} {
 	/**
 	 * constructor
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		$0
 	}//end __construct
 }//end class
@@ -64,12 +59,10 @@ class ${1:class}
 /**
  * singleton function
  */
-function `!p snip.rv = t[1].lower()`()
-{
+function `!p snip.rv = t[1].lower()`() {
 	global $`!p snip.rv = t[1].lower()`;
 
-	if ( ! $`!p snip.rv = t[1].lower()` )
-	{
+	if ( ! $`!p snip.rv = t[1].lower()` ) {
 		$`!p snip.rv = t[1].lower()` = new $1;
 	}//end if
 
@@ -78,13 +71,11 @@ function `!p snip.rv = t[1].lower()`()
 endsnippet
 
 snippet class "Gigaom plugin class"
-class ${1:class}
-{
+class ${1:class} {
 	/**
 	 * constructor
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		$0
 	}//end __construct
 }//end class
@@ -92,12 +83,10 @@ class ${1:class}
 /**
  * singleton function
  */
-function `!p snip.rv = t[1].lower()`()
-{
+function `!p snip.rv = t[1].lower()`() {
 	global $`!p snip.rv = t[1].lower()`;
 
-	if ( ! $`!p snip.rv = t[1].lower()` )
-	{
+	if ( ! $`!p snip.rv = t[1].lower()` ) {
 		$`!p snip.rv = t[1].lower()` = new $1;
 	}//end if
 
@@ -106,33 +95,28 @@ function `!p snip.rv = t[1].lower()`()
 endsnippet
 
 snippet class "Gigaom plugin class with init action"
-class ${1:class}
-{
+class ${1:class} {
 	/**
 	 * constructor
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
 	}//end __construct
 
 	/**
 	 * hooked into the init action
 	 */
-	 public function init()
-	 {
+	 public function init() {
 	 }//end init
 }//end class
 
 /**
  * singleton function
  */
-function `!p snip.rv = t[1].lower()`()
-{
+function `!p snip.rv = t[1].lower()`() {
 	global $`!p snip.rv = t[1].lower()`;
 
-	if ( ! $`!p snip.rv = t[1].lower()` )
-	{
+	if ( ! $`!p snip.rv = t[1].lower()` ) {
 		$`!p snip.rv = t[1].lower()` = new $1;
 	}//end if
 
@@ -148,8 +132,7 @@ snippet func "Action function"
 /**
  * Hooked to the $2 action
  */
-${1:public }function ${2:name}(${3: vars })
-{
+${1:public }function ${2:name}(${3: vars }) {
 	$0
 }//end $2
 endsnippet
@@ -162,56 +145,48 @@ snippet func "Filter function"
 /**
  * Hooked to the $2 filter
  */
-${1:public }function ${2:name}( $${3:var} )
-{
+${1:public }function ${2:name}( $${3:var} ) {
 	return $${3};
 }//end $2
 endsnippet
 
 snippet for "For loop"
-for ( $${2:i} = ${3:0}; $$2 < ${1:count}; $$2${4:++} )
-{
+for ( $${2:i} = ${3:0}; $$2 < ${1:count}; $$2${4:++} ) {
 }//end for
 endsnippet
 
 snippet foreach "Foreach"
-foreach ( $${1:from} as $${2:var} )
-{
+foreach ( $${1:from} as $${2:var} ) {
 	$0
 }//end foreach
 endsnippet
 
 snippet foreach "Foreach with key"
-foreach ( $${1:from} as $${2:key} => $${3:var} )
-{
+foreach ( $${1:from} as $${2:key} => $${3:var} ) {
 	$0
 }//end foreach
 endsnippet
 
 snippet while "While loop"
-while ( ${1:conditional} )
-{
+while ( ${1:conditional} ) {
 	$0
 }//end while
 endsnippet
 
 snippet if "If conditional"
-if ( ${1:conditional} )
-{
+if ( ${1:conditional} ) {
 	$0
 }//end if
 endsnippet
 
 snippet elseif "Elseif conditional"
-elseif ( ${1:conditional} )
-{
+elseif ( ${1:conditional} ) {
 	$0
 }//end elseif
 endsnippet
 
 snippet else "Else"
-else
-{
+else {
 	$0
 }//end else
 endsnippet

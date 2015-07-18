@@ -171,3 +171,11 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Open NERDTree if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"let g:dbgPavimPathMap = [['/Users/matt/projects/tribe', '/srv/www/tribe'],]
+let g:dbgPavimPort = 9000
+let g:dbgPavimBreakAtEntry = 0

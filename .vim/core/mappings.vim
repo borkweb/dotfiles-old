@@ -57,6 +57,9 @@ map <Leader>= <C-w>=
 " Toggle the awesome undo tree visualizer
 map <F5> :GundoToggle<CR>
 
+" Toggle NERDTree
+map <F6> :NERDTreeToggle<CR>
+
 map <leader>p :call TogglePasteMode()<CR>
 
 " Superuser write

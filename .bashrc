@@ -69,12 +69,6 @@ alias svimdiff='svn diff --diff-cmd ~/dotfiles/vimdiff-svn.sh'
 ##
 alias gi='. /Users/$USER/git-info.sh'
 
-function _update_ps1() {
-	export PS1="$(~/dotfiles/shell/powerline-shell/powerline-shell.py $?)"
-}
-
-export PROMPT_COMMAND="_update_ps1"
-
 ## z command
 #. `brew --prefix`/etc/profile.d/z.sh
 
